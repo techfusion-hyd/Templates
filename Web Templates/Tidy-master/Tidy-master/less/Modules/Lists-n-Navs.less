@@ -1,0 +1,350 @@
+@import-once "../Config";
+
+/*----------------,
+ *  LISTS & NAVS  |
+ *----------------'
+ */
+
+/*
+ *  General styles for lists. Includes things like:
+ *     - Inline lists
+ *     - Block lists
+ *     - Breadcrumbs
+ */
+ul
+{   
+    // This is useful for creating lists where the elements are centered
+    // inside the UL
+    &.centered
+    {
+        text-align: center;    
+    }
+    
+    &.plain, &.inline, &.blocks, &.breadcrumbs
+    {
+        padding-left: 0;
+    }
+    
+    &.plain, &.blocks, &.breadcrumbs
+    {
+        list-style: none;  
+    }
+    
+    // This is positioned here so it gets correctly
+    // overriden by the inline class
+    &.blocks
+    {
+        display: block; 
+    }
+    
+    &.inline, &.breadcrumbs
+    {
+        li
+        {
+            display: inline-block;
+            padding-left: 0.5em;
+            
+            &:first-child
+            {
+                padding-left: 0;   
+            }
+        }
+    }
+    
+    // Block type lists will require an <a> as part of their
+    // markup
+    &.blocks
+    {        
+        li
+        {
+            &:first-child a
+            {
+                padding-left: 0.8em;
+            }
+            
+            &.active a
+            {
+                background-color: @primaryColor;
+                color: #FFF;
+            }
+            
+            // Adding this class to a <li> will separate it from 
+            // the others in the list with a vertical/horizontal line
+            &.separated
+            {
+                margin-top: 1em;
+                position: relative;
+                
+                &:before
+                {
+                    content: "";
+                    display: block;
+                    position: absolute;
+                    top: -0.6em;
+                    width: 100%;
+                    height: 0;
+                    border-bottom: 1px solid #e6e6e6;
+                    border-top: 1px solid #fdfdfd;
+                }
+            }
+        }
+        
+        // The main 'block' effect
+        a
+        {
+            padding: 0.4em 0.8em;
+            margin: 0.2em 0;
+            display: block;
+            .border-radius(@borderRadius);
+            text-decoration: none;
+            
+            &:hover
+            {
+                background-color: @highlightColor;
+                color: darken(@linkColor, 10%);
+            }
+        }
+        
+        // Separaters need to be vertical when the list is 
+        // being displayed inline
+        &.inline
+        {
+            li.separated
+            {
+                margin-top: 0;
+                margin-left: 1em;
+                
+                &:before
+                {
+                    left: -0.5em;
+                    top: 0.5em;
+                    height: 50%;
+                    width: 0;
+                    border-right: 1px solid #e6e6e6;
+                    border-left: 1px solid #fdfdfd;
+                }
+            }
+        }
+    }
+    
+    // Simple breadcrumb list that creates arrows behind each list
+    // item (except the first)
+    &.breadcrumbs
+    {
+        li
+        {
+            position: relative;
+            padding-left: 2em;
+            
+            &:before, &:after
+            {
+                content: "";
+                display: block;
+                position: absolute;
+                height: 0;
+            }
+            
+            // The line
+            &:before
+            {
+                left: 0.25em;
+                top: 50%;
+                width: 1em;
+                border-top: 1px solid #bbb;
+            }
+            
+            // The 'arrow-head'
+            &:after
+            {
+                left: 1.25em;
+                top: 50%;
+                border-style: solid;
+                border-width: 4px 0 4px 4px;
+                border-color: transparent #bbb;
+                width: 0;
+                z-index: 1;
+                margin-top: -3px;
+            }
+            
+            // The first <li> shouldn't have an arrow
+            &:first-child
+            {
+                &:before, &:after
+                {
+                    display: none   
+                }
+            }
+        }
+    }
+}
+
+/*
+ * The navigation bar.
+ */
+.nav-bar
+{
+    line-height: 3em;
+    clear: both;
+    
+    // All these things should become a 'header' in the 
+    // nav bar if they are used
+    .brand
+    {
+        font-size: 1em;
+        display: inline-block;
+        padding: 0 1.2em;
+        margin: 0;
+        color: lighten(@fontColor,20%);
+    }
+    
+    // List of navigation links
+    ul
+    {
+        display: inline-block;
+        padding-left: 0.4em;
+        margin: 0;
+        
+        li
+        {
+            display: inline-block;
+            position: relative;
+            margin: 0;
+            .box-sizing(border-box);
+
+            a
+            {
+                padding: 0 0.9em;
+                display: block;
+                text-decoration: none;
+                height: 100%;
+                .box-sizing(border-box);
+                
+                &:hover
+                {
+                    background-color: @highlightColor;   
+                }
+            }
+            
+            &.active a
+            {
+                background-color: @primaryColor;
+                color: #FFF;
+            }
+            
+            // Adding the dropdown class to a <li> will add an
+            // arrow to the right hand side of it
+            &.dropdown 
+            {
+                // The dropdown list
+                ul
+                {
+                    display: none;
+                    position: absolute;
+                    padding-left: 0;
+                    background-color: @navDropdownColor;
+                    border: 1px solid @navDropdownBorderColor;
+                    z-index: 100;
+                    
+                    li
+                    {
+                        display: block;
+                        height: auto;
+                        
+                        a
+                        {
+                            padding: 0.5em 0.9em;
+                            height: auto;
+                            white-space: nowrap;
+                        }
+                    }
+                }
+
+                &:hover
+                {
+                    ul
+                    {
+                        display: block;
+                    }
+                    
+                    > a
+                    {
+                        background-color: @highlightColor;   
+                    }
+                }
+                
+                // The dropdown arrow
+                > a:after
+                {   
+                    content: "";
+                    display: inline-block;
+                    height: 0;
+                    width: 0;
+                    margin-left: 0.8em;
+                    border-style: solid;
+                    border-width: .4em .4em 0;
+                    border-color: #aaa transparent;
+                    position: relative;
+                    top: -0.115em;
+                }
+            }
+            
+            // The class to create separated items on the navigation bar
+            &.separated
+            {
+                margin-left: .237em;
+                padding-left: .5em;
+                border-left: 1px solid @navBorderColor;
+            }
+        }
+        
+        &.slide-right
+        {
+            padding-right: 0.4em;
+            padding-left: 0;
+            
+            .dropdown ul
+            {
+                right: 0;   
+            }
+        }
+    }
+    
+    &:after
+    {
+        content: "";
+        display: block;
+        clear: both;
+    }
+    
+    border: 1px solid @navBorderColor;
+    margin-bottom: 1em;
+    
+    background-color: @navBackgroundColor;
+    .border-radius(@borderRadius);
+    
+    &.full-width
+    {
+        border-width: 0;
+        
+        &:before
+        {
+            content: "";
+            display: block;
+            height: 3em;
+            
+            border: 1px solid @navBorderColor;
+            border-top-width: 0;
+            background-color: @navBackgroundColor;
+        
+            position: absolute;
+            left: 0;
+            right: 0;
+            z-index: -1;
+        }
+        
+        .brand
+        {
+            padding-left: 0;   
+        }
+    }
+}
