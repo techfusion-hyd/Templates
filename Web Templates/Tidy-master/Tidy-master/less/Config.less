@@ -1,0 +1,81 @@
+// -General Variables-
+    @fontFamily: Arial, Helvetica, sans-serif;
+    @fontColor: #444;
+    @errorFontColor: red;
+    @primaryColor: #2d99cf;
+    @linkColor: @primaryColor;
+    @highlightColor: whiteSmoke;
+    @borderRadius: 0;
+    @borderColor: #e6e6e6;
+    @panelBackgroundColor: #f5f5f5;
+    
+// -Nav-bar Variables-
+    @navBorderColor: #e6e6e6;
+    @navBackgroundColor: #fff;
+    @navDropdownColor: #fff;
+    @navDropdownBorderColor: #e6e6e6;
+
+// -Layout Variables-
+    // Size (in px) of margins, when the page is being viewed at 940px
+    @marginAt940: 20;
+    
+    // The calculated percentage margin (you probably don't want to touch the next few things)
+    @calculatedMargin: percentage(@marginAt940 / 940);
+    
+    // Percentage space available for content (after margins have been taken into account)
+    @availableSpace: 100-(11*@calculatedMargin);
+    
+    // The width of a single span (based on 12 columns, used to calculated box-widths)
+    @singleSpanWidth: @availableSpace/12;
+
+// -Form Variables-
+    @labelFontWeight: 300;
+    @labelInlineWidth: 200px;
+    @labelInlinePadding: 20px;
+    
+    @inputBorderColors: #ccc;
+    @inputBorderRadius: @borderRadius;
+    
+
+
+// -Mixins-
+    // Adds box-sizing rule with appropriate vendor prefixes
+    .box-sizing(@sizing-method)
+    {
+        box-sizing: @sizing-method;
+        -webkit-box-sizing: @sizing-method;
+    	-moz-box-sizing: @sizing-method;
+    }
+    
+    // Mixin for calculating correct percentage width based on column span
+    .box-width(@span)
+    {
+        width: (@singleSpanWidth*@span)+((@span - 1)*@calculatedMargin);
+    }
+    
+    // Adds border-radius rule with appropriate vendor prefixes
+    .border-radius(@radius)
+    {
+        border-radius: @radius;
+        -moz-border-radius: @radius;
+        -webkit-border-radius: @radius;
+    }
+    
+    .border-radius-all(@t,@r,@b,@l)
+    {
+        border-radius: @t @r @b @l;
+        -moz-border-radius: @t @r @b @l;
+        -webkit-border-radius: @t @r @b @l;
+    }
+    
+    .background-gradient(@start, @end)
+    {
+        background: @start;
+        background: -moz-linear-gradient(top, @start 0%, @end 100%);
+        background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,@start), color-stop(100%,@end));
+        background: -webkit-linear-gradient(top, @start 0%,@end 100%);
+        background: -o-linear-gradient(top, @start 0%, @end 100%);
+        background: -ms-linear-gradient(top, @start 0%, @end 100%);
+        background: linear-gradient(to bottom, @start 0%, @end 100%);
+        -ms-filter: "progid:DXImageTransform.Microsoft.gradient( startColorstr='@{start}', endColorstr='@{end}',GradientType=0 )";   
+    }

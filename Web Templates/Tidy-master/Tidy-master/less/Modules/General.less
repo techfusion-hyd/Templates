@@ -1,0 +1,39 @@
+@import-once "../Config";
+
+body
+{
+    margin-top: 0;
+    font-family: @fontFamily;
+    color: @fontColor;
+    font-size: 14px;
+}
+
+a
+{
+    color: @linkColor;
+}
+
+.slide-right
+{
+    float: right;   
+}
+
+.slide-left
+{
+    float: left;   
+}
+
+.panel
+{
+    display: block;
+    background-color: @panelBackgroundColor;
+    .border-radius(@borderRadius);
+    padding: 0 1em;
+}
+
+.panel:before, .panel:after
+{
+    display: block;
+    content: "";
+    clear: both;
+}
