@@ -1,0 +1,904 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Liberator Admin Theme | Documentation</title>
+
+	<link rel="apple-touch-icon" sizes="144x144" href="apple-touch-icon-ipad-retina.png" />
+	<link rel="apple-touch-icon" sizes="114x114" href="apple-touch-icon-iphone-retina.png" />
+	<link rel="apple-touch-icon" sizes="72x72" href="apple-touch-icon-ipad.png" />
+	<link rel="apple-touch-icon" sizes="57x57" href="apple-touch-icon-iphone.png" />
+	<link rel="shortcut icon" type="image/x-icon" href="favicon.ico" />
+
+	<!-- bootstrap -->
+    <link href="css/bootstrap/bootstrap.css" rel="stylesheet" />
+    
+    <link rel="stylesheet" href="css/font-awesome-4.0.3/css/font-awesome.min.css">
+    <link rel="stylesheet" href="css/jquery-ui.css" />
+    <link rel="stylesheet" type="text/css" href="css/toastr.css">
+
+    <link href="css/prism.css" rel="stylesheet" />
+
+	<link href="css/style.css" rel="stylesheet" type="text/css" />
+	
+	<style type="text/css">
+		.main-doc { margin-left: 0!important; width: 100%!important; }
+		.main-doc .topTabsContent { padding-right: 30px!important;}
+		.file-structure { margin-left: 20px; clear: both; }
+		.folder, .file { display: block; }
+		.folder > i { color:#e86f56; }
+		.folder .folder i{ color: #b5adac; }
+		.folder .file, .folder .folder { margin-left: 10px; }
+		.file i { color: #7a706e; }
+		small { font-style: italic; opacity: 0.7;}
+		.folder > .folder, .folder > .file { display: none;}
+		.folder.open > .folder, .folder.open > .file { display: block; }
+		.folder { cursor: pointer; }
+	</style>
+
+	
+</head>
+<body>
+
+	<div id="loading">
+		<div>
+			<div></div>
+		    <div></div>
+		    <div></div>
+		</div>
+	</div>
+
+	<div id="wrapper">
+		<div id="top">
+			
+			<div class="main-logo">
+				<a href="index.html"><img src="images/logo.png"></a>
+			</div>
+			
+		</div> <!-- /top -->
+
+		<div id="content" class="docs">
+
+			<div class="header">
+				
+				<h1 class="page-title">Documentation</h1>
+				
+
+			</div> <!-- /header -->
+
+			<div class="breadcrumbs">
+				<i class="fa fa-home"></i> Home <i class="fa fa-caret-right"></i> Documentation
+			</div>
+
+		<div class="wrp clearfix">
+
+
+				<div class="fluid">
+
+					<div class="widget grid12">
+						<div class="widget-header">
+							<div class="widget-title">
+								<i class="fa fa-tags"></i> Components
+							</div>
+						</div>
+						
+						<div class="widget-content">
+							<div class="fluid">
+				<div class="widget grid6">
+						<div class="widget-header">
+							<div class="widget-title">
+								<i class="fa fa-bar-chart-o"></i> Widget Container
+							</div>
+							<div class="widget-controls">
+								<div class="widget-config"><a clsss="dropdown-toggle" data-toggle="dropdown" href="#" onclick="return false;"><i class="fa fa-gear"></i></a>
+								<ul class="dropdown-menu pull-right">
+								    <li><a href="#"><i class="fa fa-pencil"></i> Edit</a></li>
+	                                <li><a href="#"><i class="fa fa-trash-o"></i> Delete</a></li>
+	                                <li><a href="#"><i class="fa fa-ban"></i> Ban</a></li>
+								  </ul>
+								</div>
+							</div>
+						</div>
+	<div class="widget-content">
+		<p class="marginTop20"><strong>Widget:</strong> <code>class="widget"</code>, the widget container. <code>class="widget-header"</code> for header title information and <code>class="widget-content"</code> for the main content.</p>
+		<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec id placerat diam, vitae sodales est. Pellentesque id elit massa. Duis tempor condimentum lacus quis mattis. Proin dapibus libero id dui faucibus tempus. Suspendisse potenti. In hac habitasse platea dictumst. Proin molestie commodo placerat.</p>
+	</div> <!-- /widget-content -->
+</div> <!-- /widget -->
+<div class="grid6">
+<pre class="language-markup"><code>&lt;div class=&quot;widget grid6&quot;&gt;
+	&lt;div class=&quot;widget-header&quot;&gt;
+		&lt;span class=&quot;widget-title&quot;&gt;Grid 6&lt;/span&gt;
+		&lt;div class=&quot;widget-controls&quot;&gt;
+			&lt;!-- here widget controls stuff --&gt;
+		&lt;/div&gt;
+	&lt;/div&gt; &lt;!-- /widget-header --&gt;
+	&lt;div class=&quot;widget-content&quot;&gt;
+		&lt;p&gt;The widget content&lt;/p&gt;
+	&lt;/div&gt; &lt;!-- /widget-content --&gt;
+&lt;/div&gt; &lt;!-- /widget --&gt;
+</code></pre>
+</div> <!-- /grid 6 -->
+</div> <!-- /fluid -->
+
+<div class="fluid">
+<div class="grid6">
+	<p class="marginTop20"><strong>Page loading effect: </strong> the effect uses a <code>&lt;div id="loading"&gt;&lt;/div&gt;</code>
+to hide the page until a javascript page load listener fades out the loading to show the page fully loaded. If you want to disable the effect delete the code shown on the markup box on the right.
+	</p>
+	<div id="loading-example">
+		<div>
+			<div></div>
+		    <div></div>
+		    <div></div>
+		</div>
+	</div>
+	
+</div> <!-- /grid 6 -->
+<div class="grid6">
+	<div class="marginTop20">
+<pre class="language-markup"><code>&lt;div id="loading"&gt;
+	&lt;div&gt;
+		&lt;div&gt;&lt;/div&gt;
+		&lt;div&gt;&lt;/div&gt;
+		&lt;div&gt;&lt;/div&gt;
+	&lt;/div&gt;
+&lt;/div&gt;
+&lt;!-- Javascript --&gt;
+$('#loading').fadeOut(1000);
+</code></pre>
+	</div>	
+</div> <!-- /grid 6 -->
+</div> <!-- /fluid -->
+
+
+<div class="fluid">
+<div class="grid6">
+	<p class="marginTop20"><strong>Icon button: </strong><code>class="btn icon-button"</code></p>
+	<div class="icon-grp">
+		<a href="#" onclick="return false;" class="btn icon-button"><i class="fa fa-adjust"></i></a>
+		<a href="#" onclick="return false;" class="btn icon-button"><i class="fa fa-anchor"></i></a>
+		<a href="#" onclick="return false;" class="btn icon-button"><i class="fa fa-archive"></i></a>
+		<a href="#" onclick="return false;" class="btn icon-button"><i class="fa fa-ban"></i></a>
+	</div>
+</div> <!-- /grid 6 -->
+<div class="grid6">
+	<div class="marginTop20">
+<pre class="language-markup"><code>&lt;!-- First icon example --&gt;
+&lt;a href=&quot;#&quot; class=&quot;btn icon-button&quot;&gt;
+	&lt;i class=&quot;fa fa-adjust&quot;&gt;&lt;/i&gt;
+&lt;/a&gt;</code></pre>
+	</div>	
+</div> <!-- /grid 6 -->
+</div> <!-- /fluid -->
+
+<div class="fluid">
+<div class="grid6">
+	<p class="marginTop20"><strong>Icon button width badge: </strong><code>class="badge"</code><br>Badge color: <code>blue</code></p>
+	<div class="icon-grp">
+		<a href="#" onclick="return false;" class="btn icon-button">
+			<i class="fa fa-exclamation"></i>
+			<span class="badge blue">1</span>
+		</a>
+		<a href="#" onclick="return false;" class="btn icon-button">
+			<i class="fa fa-gears"></i>
+			<span class="badge blue">3</span>
+		</a>
+		<a href="#" onclick="return false;" class="btn icon-button">
+			<i class="fa fa-headphones"></i>
+			<span class="badge blue">5</span>
+		</a>
+		<a href="#" onclick="return false;" class="btn icon-button">
+			<i class="fa fa-heart"></i>
+			<span class="badge blue">10</span>
+		</a>
+	</div>
+</div> <!-- /grid 6 -->
+<div class="grid6">
+<pre class="language-markup"><code>&lt;!-- First icon example --&gt;
+&lt;a href=&quot;#&quot; class=&quot;btn icon-button&quot;&gt;
+	&lt;i class=&quot;fa fa-exclamation&quot;&gt;&lt;/i&gt;
+	&lt;span class=&quot;badge blue&quot;&gt;1&lt;/span&gt;
+&lt;/a&gt;</code></pre>
+</div> <!-- /grid 6 -->
+</div> <!-- /fluid -->
+
+
+<div class="fluid">
+<div class="grid6">
+	<p class="marginTop20"><strong>Icon button sizes: </strong><code>class="btn icon-button icon-medium"</code> or <code>class="btn icon-button icon-big"</code></p>
+	<div class="icon-grp">
+		<a href="#" onclick="return false;" class="btn icon-button icon-medium">
+			<i class="fa fa-calendar"></i>
+			<span class="badge blue">5</span>
+		</a>
+		<a href="#" onclick="return false;" class="btn icon-button icon-medium"><i class="fa fa-briefcase"></i></a>
+		<a href="#" onclick="return false;" class="btn icon-button icon-big"><i class="fa fa-html5"></i></a>
+		<a href="#" onclick="return false;" class="btn icon-button icon-big"><i class="fa fa-css3"></i></a>
+	</div>
+</div> <!-- /grid 6 -->
+<div class="grid6">
+<pre class="language-markup"><code>&lt;!-- First icon example --&gt;
+&lt;a href=&quot;#&quot; class=&quot;btn icon-button icon-medium&quot;&gt;
+	&lt;i class=&quot;fa fa-calendar&quot;&gt;&lt;/i&gt;
+	&lt;span class=&quot;badge blue&quot;&gt;5&lt;/span&gt;
+&lt;/a&gt;
+</code></pre>
+</div> <!-- /grid 6 -->
+</div> <!-- /fluid -->
+
+
+<div class="fluid">
+<div class="grid6">
+	<p class="marginTop20"><strong>Icon button colors: </strong><code>class="btn icon-button btn-red"</code></p>
+	<div class="icon-grp">
+		<a href="#" onclick="return false;" class="btn icon-button btn-red"><i class="fa fa-magnet"></i></a>
+		<a href="#" onclick="return false;" class="btn icon-button btn-green"><i class="fa fa-microphone"></i></a>
+		<a href="#" onclick="return false;" class="btn icon-button icon-medium btn-blue"><i class="fa fa-phone"></i></a>
+		<a href="#" onclick="return false;" class="btn icon-button icon-medium btn-turquoise"><i class="fa fa-plane"></i></a>
+	</div>
+</div> <!-- /grid 6 -->
+<div class="grid6">
+<pre class="language-markup"><code>&lt;!-- First icon example --&gt;
+&lt;a href=&quot;#&quot; onclick=&quot;return false;&quot; class=&quot;btn icon-button btn-red&quot;&gt;&lt;i class=&quot;fa fa-magnet&quot;&gt;&lt;/i&gt;&lt;/a&gt;
+</code></pre>
+</div> <!-- /grid 6 -->
+</div> <!-- /fluid -->
+
+
+<div class="fluid">
+<div class="grid6">
+	<p class="marginTop20"><strong>Switch checkboxes: </strong><code>&lt;input type=&quot;checkbox&quot;</code> with <code>&lt;label class=&quot;switch&quot;&gt;&lt;/label&gt;</code></p>
+	<div class="widget-content w-switches">
+						<input type="checkbox" id="switch-1" checked />
+	  					<label class="switch turquoise" for="switch-1"><i></i></label>
+
+	  					<input type="checkbox" id="switch-3" checked />
+	  					<label class="switch green" for="switch-3"><i></i></label>
+
+	  					<input type="checkbox" id="switch-6" checked />
+	  					<label class="switch orange" for="switch-6"><i></i></label>
+
+	  					<input type="checkbox" id="switch-7" checked />
+	  					<label class="switch black" for="switch-7"><i></i></label>
+
+	  					<input type="checkbox" id="switch-8" checked />
+	  					<label class="switch red" for="switch-8"><i></i></label>
+
+	  					<input type="checkbox" id="switch-10" checked />
+	  					<label class="switch" for="switch-10"><i></i></label>
+
+	  					<input type="checkbox" id="switch-12" checked />
+	  					<label class="switch grey" for="switch-12"><i></i></label>
+	</div>
+</div> <!-- /grid 6 -->
+<div class="grid6">
+<pre class="language-markup"><code>&lt;!-- First switch example --&gt;
+&lt;input type=&quot;checkbox&quot; id=&quot;switch-1&quot; checked /&gt;&lt;label class=&quot;switch turquoise&quot; for=&quot;switch-01&quot;&gt;&lt;/label&gt;
+
+&lt;!-- Second switch example --&gt;
+&lt;input type=&quot;checkbox&quot; id=&quot;switch-3&quot; checked /&gt;&lt;label class=&quot;switch green&quot; for=&quot;switch-3&quot;&gt;&lt;/label&gt;
+</code></pre>
+</div> <!-- /grid 6 -->
+</div> <!-- /fluid -->
+
+
+
+
+
+
+<div class="fluid">
+<div class="grid6">
+	<p class="marginTop20"><strong>Buttons: </strong> <code>button</code> element with <code>class="btn"</code> Button color: <code>btn-green</code></p>
+	<div class="btns">	
+						<button class="btn btn-red">Red button</button>
+						<button class="btn btn-orange">Orange button</button>
+						<button class="btn btn-blue">Blue button</button>
+						<button class="btn btn-green">Green button</button>
+					</div>
+</div> <!-- /grid 6 -->
+<div class="grid6">
+<pre class="language-markup"><code>&lt;button class=&quot;btn btn-red&quot;&gt;Red button&lt;/button&gt;
+&lt;button class=&quot;btn btn-orange&quot;&gt;Orange button&lt;/button&gt;
+&lt;button class=&quot;btn btn-blue&quot;&gt;Blue button&lt;/button&gt;
+&lt;button class=&quot;btn btn-green&quot;&gt;Green button&lt;/button&gt;
+</code></pre>
+</div> <!-- /grid 6 -->
+</div> <!-- /fluid -->
+
+
+
+<div class="fluid">
+<div class="grid6">
+	<p class="marginTop20"><strong>Dropdown button:</strong> A container <code>class="btn-group"</code>, a button <code>class="btn dropdown-toggle"</code> and a list of actions <code>&lt;ul class=&quot;dropdown-menu&quot;&gt;&lt;/ul&gt;</code>. To change the orientation of the dropdown you can add to the group container: <code>class="btn-group dropup"</code></p>
+	<div class="btns dp-btns">	
+		<div class="btn-group">
+			<a class="btn btn-red dropdown-toggle" data-toggle="dropdown" href="#">
+				Action <span class="caret"></span>
+			</a>
+			<ul class="dropdown-menu">
+				<li><a href="#"><i class="fa fa-pencil"></i> Edit</a></li>
+	            <li><a href="#"><i class="fa fa-trash-o"></i> Delete</a></li>
+	            <li><a href="#"><i class="fa fa-ban"></i> Ban</a></li>
+			</ul>
+		</div> <!-- /btn-group -->
+		<div class="btn-group">
+			<a class="btn btn-green dropdown-toggle" data-toggle="dropdown" href="#">
+				Action <span class="caret"></span>
+			</a>
+			<ul class="dropdown-menu">
+				<li><a href="#"><i class="fa fa-pencil"></i> Edit</a></li>
+	            <li><a href="#"><i class="fa fa-trash-o"></i> Delete</a></li>
+	            <li><a href="#"><i class="fa fa-ban"></i> Ban</a></li>
+			</ul>
+		</div> <!-- /btn-group -->
+		<div class="btn-group dropup">
+			<a class="btn btn-small btn-blue dropdown-toggle" data-toggle="dropdown" href="#">
+				Action <span class="caret"></span>
+			</a>
+			<ul class="dropdown-menu pull-right">
+				<li><a href="#"><i class="fa fa-pencil"></i> Edit</a></li>
+	            <li><a href="#"><i class="fa fa-trash-o"></i> Delete</a></li>
+	            <li><a href="#"><i class="fa fa-ban"></i> Ban</a></li>
+			</ul>
+		</div> <!-- /btn-group -->
+		<div class="btn-group">
+			<a class="btn btn-small btn-orange dropdown-toggle" data-toggle="dropdown" href="#">
+				Action <span class="caret"></span>
+			</a>
+			<ul class="dropdown-menu pull-right">
+				<li><a href="#"><i class="fa fa-pencil"></i> Edit</a></li>
+	            <li><a href="#"><i class="fa fa-trash-o"></i> Delete</a></li>
+	            <li><a href="#"><i class="fa fa-ban"></i> Ban</a></li>
+			</ul>
+		</div> <!-- /btn-group -->
+
+
+	</div>
+</div> <!-- /grid 6 -->
+<div class="grid6">
+<pre class="language-markup"><code>&lt;!-- First btn-group example --&gt;
+&lt;div class=&quot;btn-group&quot;&gt;
+	&lt;a class=&quot;btn btn-red dropdown-toggle&quot; data-toggle=&quot;dropdown&quot; href=&quot;#&quot;&gt;Action &lt;span class=&quot;caret&quot;&gt;&lt;/span&gt;&lt;/a&gt;
+	&lt;ul class=&quot;dropdown-menu&quot;&gt;
+		&lt;!-- here the list items --&gt;
+	&lt;/ul&gt;
+&lt;/div&gt; &lt;!-- /btn-group --&gt;
+</code></pre>
+</div> <!-- /grid 6 -->
+</div> <!-- /fluid -->
+
+
+						</div>
+						
+
+					</div> <!-- /widget -->
+
+				</div> <!-- /fluid -->
+
+				<div class="fluid">
+
+					<div class="widget grid6">
+						<div class="widget-header">
+							<div class="widget-title">
+								<i class="fa fa-anchor"></i> Bootsrap 3.x and Fontawesome 4.x
+							</div>
+						</div> <!-- /widget-header -->
+
+						<div class="widget-content">
+<p>Liberator is based on the latest version of <strong>Twitter Bootsrap 3.x</strong>. Bootstrap is a: <blockquote class="italic">Sleek, intuitive, and powerful mobile first front-end framework for faster and easier web development.</blockquote> It offers a full range of components that will allow you to create all the pieces needed in your project easily and proficiently.<br/>
+<small><a href="http://getbootstrap.com/">Visit the official website for the full documentation</a></small>
+</p>
+<p>We also include the latest <strong>Fontawesome</strong> icon font. Fontawesome is a: <blockquote class="italic">scalable vector icons that can instantly be customized — size, color, drop shadow, and anything that can be done with the power of CSS.</blockquote> You can quickly add the necessary visual clues for your project without having to create or hunt down specific graphics.
+<br/>
+<small><a href="http://fontawesome.io">Visit the official website for the full documentation</a></small>
+</p>
+						</div>
+
+					</div> <!-- /widget -->
+
+					<div class="widget grid6">
+						<div class="widget-header">
+							<div class="widget-title">
+								<i class="fa fa-mobile"></i> Responsive @media queries
+							</div>
+						</div> <!-- /widget-header -->
+
+						<div class="widget-content">
+<p>We use <strong>@media queries</strong> in our style.css file to add specific css in order to make our template responds best to different devices resolution.  
+<blockquote class="italic">A media query consists of a media type and zero or more expressions that check for the conditions of particular media features. Among the media features that can be used in media queries are ‘width’, ‘height’, and ‘color’. By using media queries, presentations can be tailored to a specific range of output devices without changing the content itself.</blockquote>
+
+	Those <strong>@media queries</strong> are in addition to the ones included in bootstrap.css file. They are mostly here to adapt our specific layout and demo content to different screen width.
+</p>
+<p>For example we hide specific pagination pages to fit smaller width <code>.pag ul li:nth-child(7)<br/> { display: none; }</code>, we use it to change the sidebar navigation display <code>.main-nav li<br/> { white-space: nowrap; }</code>, and for other uses similar to those.
+</p>
+<p>
+According to your needs you might want to add new <strong>@media queries</strong> for your specific content or to override ours. You should not do it in the styles.css file but create a new specific css file and link it to your HTML. See file structure section for more details. 
+</p>
+						</div>
+
+					</div> <!-- /widget -->
+
+				</div> <!-- /fluid -->
+
+				<div class="fluid">
+
+					<div class="widget grid4">
+						<div class="widget-header">
+							<div class="widget-title">
+								<i class="fa fa-comments"></i> File Structure
+							</div>
+						</div> <!-- /widget-header -->
+						<div class="widget-content">
+							<p class="marginTop20"><strong>Liberator</strong> is a clean admin template ideal to use as a base for your web or mobile app backend dashboard.</p>
+							<p><strong>Important:</strong> <span class="italic">If you need to add some custom CSS, do not use the style.css file but for instance the yourname-custom.css file (rename, add css, link it) to avoid loosing your customization when upgrading to a newer version of Liberator.</span></p>
+							<div class="divider"></div>
+
+							<h4>File structure</h4>
+							<p>Liberator	 template is ordered under the following structure:</p>
+							<div class="file-structure">
+								<span class="file"><i class="fa fa-file"></i> index.html</span>
+								<span class="file"><i class="fa fa-file"></i> form-input.html</span>
+								<span class="file"><i class="fa fa-file"></i> form-button.html</span>
+								<span class="file"><i class="fa fa-file"></i> icons.html</span>
+								<span class="file"><i class="fa fa-file"></i> ui.html</span>
+								<span class="file"><i class="fa fa-file"></i> grid.html</span>
+								<span class="file"><i class="fa fa-file"></i> charts.html</span>
+								<span class="file"><i class="fa fa-file"></i> 404.html</span>
+								<span class="file"><i class="fa fa-file"></i> login.html</span>
+								
+								<div class="folder open">
+									<i class="fa fa-folder-open"></i> css
+									<span class="file"><i class="fa fa-file"></i> style.css</span>
+									<span class="file"><i class="fa fa-file"></i> toastr.css</span>
+									<span class="file"><i class="fa fa-file"></i> prism.css</span>
+									<span class="file"><i class="fa fa-file"></i> yourname-custom.css</span>
+									<div class="folder">
+										<i class="fa fa-folder-open"></i> bootstrap
+										<span class="file"><i class="fa fa-file"></i> bootstrap.css</span>
+									</div>
+									<div class="folder">
+										<i class="fa fa-folder-open"></i> font-awesome-4.0.3
+										<span class="folder"><i class="fa fa-folder-close"></i> css</span>
+										<span class="folder"><i class="fa fa-folder-close"></i> font</span>
+									</div>
+								</div>
+								
+								<div class="folder open">
+									<i class="fa fa-folder-open"></i> js
+									<span class="file"><i class="fa fa-file"></i> bootstrap.min.js</span>
+									<span class="file"><i class="fa fa-file"></i> jquery-1.10.2.min.js</span>
+									<span class="file"><i class="fa fa-file"></i> jquery-ui.min.js</span>
+									<span class="file"><i class="fa fa-file"></i> jquery.easytabs.min.js</span>
+									<span class="file"><i class="fa fa-file"></i> jquery.flot*.js</span>
+									<span class="file"><i class="fa fa-file"></i> jquery.sparkline.min.js</span>
+									<span class="file"><i class="fa fa-file"></i> jquery.hashchange.min.js</span>
+									<span class="file"><i class="fa fa-file"></i> prefixfree.min.js</span>
+									<span class="file"><i class="fa fa-file"></i> prism.js</span>
+									<span class="file"><i class="fa fa-file"></i> toastr.min.js</span>
+								</div>
+								<div class="folder open">
+									<i class="fa fa-folder-open"></i> images
+									<span class="file"><i class="fa fa-picture-o"></i> logo.jpg</span>
+									<span class="file"><i class="fa fa-picture-o"></i> user.jpg</span>
+									<span class="file"><i class="fa fa-picture-o"></i> comment-1.jpg</span>
+									<span class="file"><i class="fa fa-picture-o"></i> comment-2.jpg</span>
+								</div>
+								<span class="file"><i class="fa fa-picture-o"></i> apple-touch-icon-ipad-retina.png</span>
+								<span class="file"><i class="fa fa-picture-o"></i> apple-touch-icon-ipad.png</span>
+								<span class="file"><i class="fa fa-picture-o"></i> apple-touch-icon-iphone-retina.png</span>
+								<span class="file"><i class="fa fa-picture-o"></i> apple-touch-icon-iphone.png</span>
+								<span class="file"><i class="fa fa-picture-o"></i> favicon.ico</span>
+
+							</div>
+
+						</div>
+
+						
+					</div> <!-- /widget -->
+
+					<div class="widget grid8">
+						<div class="widget-header">
+							<div class="widget-title">
+								<i class="fa fa-pencil"></i> Libraries
+							</div>
+						</div> <!-- /widget-header -->
+						
+						<div class="widget-content">
+							<p class="marginTop20">Here are all the dependencies that <strong>Liberator</strong> uses for different scopes. <br> We recommend to include the <code>.css</code> files inside the <code>&lt;head&gt;</code> tag and the <code>.js</code> files before the closing of the <code>&lt;body&gt;</code> tag</p>
+
+	<div class="divider"></div>
+
+	<p class="marginTop20"><strong>Twitter Bootstrap 3.0.3</strong> <small><a href="http://getbootstrap.com/">Official website</a></small></p>
+	<code class="language-markup">&lt;link href=&quot;css/bootstrap/bootstrap.css&quot; rel=&quot;stylesheet&quot; /&gt;
+&lt;script type=&quot;text/javascript&quot; src=&quot;js/bootstrap.min.js&quot;&gt;&lt;/script&gt;</code>
+
+	<p class="marginTop20"><strong>-prefix-free</strong> <small><a href="http://leaverou.github.io/prefixfree/">Official website</a></small></p>
+	<code class="language-markup">&lt;script type=&quot;text/javascript&quot; src=&quot;js/prefixfree.min.js&quot;&gt;&lt;/script&gt;</code>
+	<p><code>Attention:</code> Unprefixed linked stylesheets won’t work locally in Chrome and Opera.</p>
+
+	<p class="marginTop20"><strong>jQuery 1.10.2</strong> <small><a href="http://jquery.com/">Official website</a></small></p>
+	<code class="language-markup">&lt;script type=&quot;text/javascript&quot; src=&quot;js/jquery-1.10.2.min.js&quot;&gt;&lt;/script&gt;</code>
+
+	<p class="marginTop20"><strong>jQuery UI</strong> <small><a href="http://jqueryui.com/">Official website</a></small></p>
+	<code class="language-markup">&lt;link rel=&quot;stylesheet&quot; href=&quot;http://code.jquery.com/ui/1.10.3/themes/smoothness/jquery-ui.css&quot; /&gt;</code>
+	<code class="language-markup">&lt;script type=&quot;text/javascript&quot; src=&quot;js/jquery-ui.min.js&quot;&gt;&lt;/script&gt;</code>
+
+	<p class="marginTop20"><strong>FontAwesome 4.0.3</strong> <small><a href="http://fontawesome.io">Official website</a></small></p>
+	<code class="language-markup">&lt;link rel=&quot;stylesheet&quot; href=&quot;css/font-awesome-4.0.3/css/font-awesome.min.css&quot;&gt;</code>
+
+	<p class="marginTop20"><strong>jQuery Flot plugin</strong> <small><a href="http://www.flotcharts.org/">Official website</a></small></p>
+	<code class="language-markup">&lt;script type=&quot;text/javascript&quot; src=&quot;js/jquery.flot.js&quot;&gt;&lt;/script&gt;</code>
+	<code class="language-markup">&lt;script type=&quot;text/javascript&quot; src=&quot;js/excanvas.min.js&quot;&gt;&lt;/script&gt;</code>
+	<code class="language-markup">&lt;script type=&quot;text/javascript&quot; src=&quot;js/jquery.flot.resize.js&quot;&gt;&lt;/script&gt;</code>
+	<code class="language-markup">&lt;script type=&quot;text/javascript&quot; src=&quot;js/jquery.flot.stack.js&quot;&gt;&lt;/script&gt;</code>
+	<code class="language-markup">&lt;script type=&quot;text/javascript&quot; src=&quot;js/jquery.flot.categories.js&quot;&gt;&lt;/script&gt;</code>
+	<code class="language-markup">&lt;script type=&quot;text/javascript&quot; src=&quot;js/jquery.flot.crosshair.js&quot;&gt;&lt;/script&gt;</code>
+	<code class="language-markup">&lt;script type=&quot;text/javascript&quot; src=&quot;js/jquery.flot.fillbetween.js&quot;&gt;&lt;/script&gt;</code>
+
+	<p class="marginTop20"><strong>jQuery EasyTabs</strong> <small><a href="http://os.alfajango.com/easytabs/">Official website</a></small></p>
+	<code class="language-markup">&lt;script type=&quot;text/javascript&quot; src=&quot;js/jquery.easytabs.min.js&quot;&gt;&lt;/script&gt;</code>
+
+	<p class="marginTop20"><strong>jQuery Hashchange Event</strong> <small><a href="http://benalman.com/code/projects/jquery-hashchange/docs/files/jquery-ba-hashchange-js.html">Official website</a></small></p>
+	<code class="language-markup">&lt;script type=&quot;text/javascript&quot; src=&quot;js/jquery.hashchange.min.js&quot;&gt;&lt;/script&gt;</code>
+
+	<p class="marginTop20"><strong>jQuery Sparklines</strong> <small><a href="http://omnipotent.net/jquery.sparkline/#s-about">Official website</a></small></p>
+	<code class="language-markup">&lt;script type=&quot;text/javascript&quot; src=&quot;js/jquery.sparkline.min.js&quot;&gt;&lt;/script&gt;</code>
+
+	<p class="marginTop20"><strong>Toastr notifications</strong> <small><a href="http://codeseven.github.io/toastr/">Official website</a></small></p>
+	<code class="language-markup">&lt;link rel=&quot;stylesheet&quot; type=&quot;text/css&quot; href=&quot;css/toastr.css&quot;&gt;</code><br>
+	<code class="language-markup">&lt;script type=&quot;text/javascript&quot; src=&quot;js/toastr.min.js&quot;&gt;&lt;/script&gt;</code>
+							
+						</div>
+
+					</div> <!-- /widget -->
+
+				</div> <!-- /fluid -->
+
+
+				<div class="fluid">
+
+					<div class="widget grid12">
+						<div class="widget-header">
+							<div class="widget-title">
+								<i class="fa fa-file-text-o"></i> Pixeden Web Templates License
+							</div>
+						</div> <!-- /widget-header -->
+
+						<div class="widget-content">
+
+<h3>Unlimited Usage Granted:</h3>
+<p>You have the right to use Pixeden web templates on as many sites as you want. After your membership expires, you may continue to use the templates with no time restrictions.</p>
+
+<h3>License:</h3>
+<p>Pixeden web templates are GPL compliant. All PHP portions of the templates, themes and styles are licensed under the appropriate GPL license of the platform (Bootstrap, Wordpress etc…). The non-compiled portions including source file, images, cascading style sheets and JavaScript are licensed under the The “Pixeden Proprietary Use License" in accordance with the rest of these Terms of Service.</p>
+
+<h3>Modifications:</h3>
+<p>You are authorized to make any necessary modification(s) to our web templates to fit your purposes. You may not however redistribute or release non-GPL portions of the templates as GPL or otherwise. You may remove our copyright from the footer of the web templates if needed. Porting non-GPL portions of our templates to other platforms and content management systems and redistributing as GPL or otherwise is also strictly prohibited. Please contact us if you have any requirements that are not covered by these terms.</p>
+
+<h3>Unauthorized use:</h3>
+<p>You may not place any non-GPL portions of our templates, modified or unmodified, on any medium and offer them for redistribution or resale of any kind without prior written consent from Pixeden. Please contact us if you require more clarification.
+All templates are always designed for the latest version of the platform they are designed for, as such we can give no guarantee that the templates will run with previous versions of those platforms. </p>
+
+<h3>Assignability:</h3>
+<p>You may not sub-license, assign, or transfer this license or Pixeden subscription to anyone else without prior written consent from Pixeden.</p>
+
+<h3>Ownership:</h3>
+<p>Our resources are provided “as is” without warranty of any kind, either expressed or implied. In no event shall Pixeden be liable for any damages including, but not limited to, direct, indirect, special, incidental or consequential damages or other losses arising out of the use of or inability to use our products.</p>
+
+<h3>Use of Content:</h3>
+<p>You acknowledge that our resources contain or may contain material (collectively the “Content”) which is protected by copyright, trademark or other proprietary rights; therefore, you are only permitted to use the material as expressly authorized by Pixeden. You may not transfer or sell, reproduce, create derivative works from, distribute, or in any way exploit any of the Content, in whole or in part, except with an expressly permitted Agreement from the developer.</p>
+
+<h3>Refund policy:</h3>
+<p>Since Pixeden is offering non-tangible goods we do not issue refunds after the membership is made, which you are responsible for understanding upon registering at our site.<br/>
+We however can look at specific cases and issue an exceptional one-off refund. If you think that your case should grant you a partial or full refund please contact us.</p>
+
+<h3>Warranty:</h3>
+<p>Pixeden expressly disclaims all warranties of any kind, whether express or implied, including, but not limited to the implied warranties of title, merchantability including, but not limited to merchantability of computer programs, and fitness for a particular purpose. Pixeden does not warrant or guarantee these templates in any manner. We cannot guarantee they will function with all 3rd party templates as there is currently no certification process for such components. Browser compatibility should be tested against the demonstration templates on the demo server. Please ensure that the browsers you use will work with the templates as we can not guarantee that Pixeden templates will work with all browser combinations. Some states or jurisdictions do not allow the exclusion of certain warranties. Nothing in this section should be construed as excluding or limiting any warranty beyond what is permissible under applicable law.</p>
+
+<h3>Support:</h3>
+<p>Pixeden offers these templates and designs ‘as is’, with no implied meaning that they will function exactly as you wish or with all 3rd party components and modules. Further, we offer no support via email or otherwise for installation, customization, administration, etc. You acknowledge by your use of the templates that it is at your sole risk, and that you assume full responsibility for all costs associated with all necessary servicing or repairs of any equipment you use in connection with the templates.</p>
+
+<h3>Complete terms of service:</h3>
+<p>This specific Web Templates License completes our general terms of service that can be found on our website:<br/>
+<a href="http://fontawesome.io">http://www.pixeden.com/terms-of-use</a></p>
+
+
+
+
+						</div>
+
+					</div> <!-- /widget -->
+
+				</div> <!-- /fluid -->
+
+
+			</div> <!-- /wrp -->
+
+		</div> <!-- /content -->
+		<footer class="footer">
+			2013 © Liberator Admin v1.0. Powered by <a href="http://www.pixeden.com/">pixeden</a>
+		</footer>
+
+	</div> <!-- /wrapper -->
+
+
+	<script type="text/javascript" src="js/prefixfree.min.js"></script>
+	<script type="text/javascript" src="js/jquery-1.10.2.min.js"></script>
+	<script type="text/javascript" src="js/jquery-ui.js"></script>
+	<script type="text/javascript" src="js/bootstrap.min.js"></script>
+	<script type="text/javascript" src="js/excanvas.min.js"></script>
+	<script type="text/javascript" src="js/jquery.flot.js"></script>
+	<script type="text/javascript" src="js/jquery.flot.resize.js"></script>
+	<script type="text/javascript" src="js/jquery.sparkline.min.js"></script>
+	<script type="text/javascript" src="js/jquery.hashchange.min.js"></script>
+	<script type="text/javascript" src="js/jquery.easytabs.min.js"></script>
+	<script type="text/javascript" src="js/toastr.min.js"></script>
+	<script type="text/javascript" src="js/prism.js"></script>
+
+	<script type="text/javascript">
+
+		$(window).load(function(){
+			$('#loading').fadeOut(1000);
+
+			$('.folder > i').click(function(){
+				$(this).parent().toggleClass('open');
+			})
+
+		// $(document).ready(function(){
+
+			$('.collapsible > a').click(function(){
+				$(this).parent().toggleClass('open');
+				if( $(this).parent().siblings().hasClass('open') ){
+					$(this).parent().siblings().removeClass('open');
+				}
+			return false;
+			}) // Collapsible
+
+
+			// -------------------------- SPARKLINE miniCHARTS -----------------------------//
+
+			$("#stats_visits").sparkline('html',{
+		        type: 'pie',
+		        sliceColors: ['#499ac7','transparent'],
+		        offset:-90,
+		        tooltipClassname:'tooltip-sp',
+		        disableHighlight:true
+		    });
+		    $("#stats_users").sparkline('html',{
+		        type: 'pie',
+		        sliceColors: ['#37343b','transparent'],
+		        offset:-90,
+		        tooltipClassname:'tooltip-sp',
+		        disableHighlight:true 
+		    });
+		    $("#stats_orders").sparkline('html',{
+		        type: 'pie',
+		        sliceColors: ['#83a854','transparent'],
+		        offset:-90,
+		        tooltipClassname:'tooltip-sp',
+		        disableHighlight:true
+		    });
+
+		    
+		    // -------------------------- FLOT CHARTS -----------------------------//
+
+		    var sin = [], cos = [];
+		    for (var i = 0; i < 20; i += 0.5) {
+		        sin.push([i, Math.sin(i-1.5)]);
+		        cos.push([i, Math.cos(i+1.6)]);
+		    }
+
+		    var sin2 = [], cos2 = [];
+		    for (var i = 0; i < 40; i += 0.7) {
+		        sin2.push([i, Math.sin(i-0.23) - 0.1]);
+		        cos2.push([i, Math.cos(i+0.80)]);
+		    }
+
+		    var sin3 = [], cos3 = [];
+		    for (var i = 0; i < 74; i += 0.7) {
+		        sin3.push([i, Math.sin(i-0.23) - 0.1]);
+		        cos3.push([i, Math.cos(i+0.80)]);
+		    }
+
+		    // Chart Month
+		    var plot = $.plot($("#chart-month"),
+		           [ { data: sin, label: "sin(x)"}, { data: cos, label: "cos(x)" } ], {
+		               series: {
+		                   lines: { show: true },
+		                   points: { show: true }
+		               },
+		               grid: { hoverable: true, clickable: true },
+		               yaxis: { min: -1.1, max: 1.1 },
+		               xaxis: { min: 0, max: 14 },
+		               legend: {
+		                    show: true,
+		                    // margin: number of pixels or [x margin, y margin]
+		                    //container: '.cLegend'
+		                    // sorted: null/false, true, "ascending", "descending", "reverse", or a comparator
+		                },
+		                colors: [ '#52aed3', '#83a854' ]
+		             });
+
+		    // Chart Week
+		     var plot = $.plot($("#chart-week"),
+		           [ { data: sin2, label: "sin(x)"}, { data: cos2, label: "cos(x)" } ], {
+		               series: {
+		                   lines: { show: true },
+		                   points: { show: true }
+		               },
+		               grid: { hoverable: true, clickable: true },
+		               yaxis: { min: -1.1, max: 1.1 },
+		               xaxis: { min: 0, max: 14 },
+		               legend: {
+		                    show: true,
+		                    // margin: number of pixels or [x margin, y margin]
+		                    //container: '.cLegend'
+		                    // sorted: null/false, true, "ascending", "descending", "reverse", or a comparator
+		                },
+		                colors: [ '#52aed3', '#83a854' ]
+		             });
+
+		     // Chart Day
+		     var plot = $.plot($("#chart-day"),
+		           [ { data: sin3, label: "sin(x)"}, { data: cos3, label: "cos(x)" } ], {
+		               series: {
+		                   lines: { show: true },
+		                   points: { show: true }
+		               },
+		               grid: { hoverable: true, clickable: true },
+		               yaxis: { min: -1.1, max: 1.1 },
+		               xaxis: { min: 0, max: 74 },
+		               legend: {
+		                    show: true,
+		                    // margin: number of pixels or [x margin, y margin]
+		                    //container: '.cLegend'
+		                    // sorted: null/false, true, "ascending", "descending", "reverse", or a comparator
+		                },
+		                colors: [ '#52aed3', '#83a854' ]
+		             });
+
+
+		    function showTooltip(x, y, contents) {
+		        $('<div id="chart-tooltip" class="chart-tooltip">' + contents + '</div>').css( {
+		            position: 'absolute',
+		            display: 'none',
+		            top: y + 5,
+		            left: x + 5,
+		            'z-index': '9999',
+		            'color': '#fff',
+		            'font-size': '11px',
+		            opacity: 0.8
+		        }).appendTo("body").fadeIn(200);
+		    }
+
+		    var previousPoint = null;
+		    $(".chart").bind("plothover", function (event, pos, item) {
+		        $("#x").text(pos.x.toFixed(2));
+		        $("#y").text(pos.y.toFixed(2));
+
+		        if ($(".chart").length > 0) {
+		            if (item) {
+		                if (previousPoint != item.dataIndex) {
+		                    previousPoint = item.dataIndex;
+		                    
+		                    $("#chart-tooltip").remove();
+		                    var x = item.datapoint[0].toFixed(2),
+		                        y = item.datapoint[1].toFixed(2);
+		                    
+		                    showTooltip(item.pageX, item.pageY,
+		                                item.series.label + " of " + x + " = " + y);
+		                }
+		            }
+		            else {
+		                $("#chart-tooltip").remove();
+		                previousPoint = null;            
+		            }
+		        }
+		    });
+
+		    $(".chart").bind("plotclick", function (event, pos, item) {
+		        if (item) {
+		            $("#clickdata").text("You clicked point " + item.dataIndex + " in " + item.series.label + ".");
+		            plot.highlight(item.series, item.datapoint);
+		        }
+		    });
+
+
+		    // -------------------------- jQueryUI SLIDERS -----------------------------//
+
+		    $('.slider').slider();
+
+		    $('.slider.range-min').slider({
+				range: "min",
+				slide: function( event, ui ) {
+			        $('.slider.range-min > a.ui-slider-handle').html("<div class='range-tooltip'>$ " + $(".slider.range-min").slider("value") + "</div>")
+			      },
+			    stop: function( event, ui ) {
+			    	$('.range-tooltip').delay(1000).fadeOut();
+			    }
+			});
+
+			$('.slider.range-min').on( "slide", function( event, ui ) {
+				if($(this).slider('value') > 5){
+					$('.slider.range-min > a.ui-slider-handle').addClass('color');
+				} else {
+					$('.slider.range-min > a.ui-slider-handle').removeClass('color');
+				}
+			} );
+
+			$('.slider.range').slider({
+				range: true,
+			    max: 750,
+			    values: [ 75, 300 ],
+			    slide: function( event, ui ) {
+			    	var handleIndex = $(ui.handle).index(); // left:0 - right:2
+			    	if( handleIndex == 0 ){
+			    		$(ui.handle).html("<div class='range-tooltip'>$ " + ui.values[0] + "</div>");
+			    	} else if( handleIndex == 2 ){
+			    		$(ui.handle).html("<div class='range-tooltip'>$ " + ui.values[1] + "</div>");
+			    	}
+			      },
+			    stop: function( event, ui ) {
+			    	$('.range-tooltip').delay(1000).fadeOut();
+			    }
+			});
+
+			// Iteration to set the default value of Vertical Sliders
+
+			$('.slider.vertical').each(function(){
+				$(this).slider({
+				orientation: "vertical",
+			      range: "min",
+			      min: 0,
+			      max: 100,
+			      value: $(this).attr('data-vY')
+				})	
+			})
+			
+			$('.progressbar').each(function(){
+				var v = parseInt($(this).attr('value'));
+				$(this).progressbar({
+			      value: v
+			    })
+			})
+
+			$('.progressbar > .ui-progressbar-value').hover(function(){
+				$(this).html("<div class='progress-tooltip'>" + $(this).parent().progressbar('value') + " %</div>");
+				$('.progress-tooltip').delay(2000).fadeOut()
+			})
+
+			// eTabs
+			$('#eTabs').easytabs();
+
+			// Mobile Nav
+			$('.m-nav').click(function(){
+				$('.main-nav').toggleClass('open');
+			})
+
+			// Quick Nav clicks
+			$('.qn-arrow-left').click(function(){
+				var sel = $('.quick-nav ul').find('.active');
+				if( sel.hasClass('qn-first') ){
+					sel.removeClass('active');
+					sel.parent().find('.qn-last').addClass('active');
+				} else {
+					sel.removeClass('active').prev().addClass('active');
+				}
+			})
+			$('.qn-arrow-right').click(function(){
+				var sel = $('.quick-nav ul').find('.active');
+				if( sel.hasClass('qn-last') ){
+					sel.removeClass('active');
+					sel.parent().find('.qn-first').addClass('active');
+				} else {
+					sel.removeClass('active').next().addClass('active');
+				}
+			})
+
+			
+
+		}) // Ready.
+	</script>
+</body>
+</html>
