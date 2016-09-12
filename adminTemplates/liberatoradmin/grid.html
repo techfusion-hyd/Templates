@@ -1,0 +1,590 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Liberator Admin Theme ! Grid Layout</title>
+
+	<link rel="apple-touch-icon" sizes="144x144" href="apple-touch-icon-ipad-retina.png" />
+	<link rel="apple-touch-icon" sizes="114x114" href="apple-touch-icon-iphone-retina.png" />
+	<link rel="apple-touch-icon" sizes="72x72" href="apple-touch-icon-ipad.png" />
+	<link rel="apple-touch-icon" sizes="57x57" href="apple-touch-icon-iphone.png" />
+	<link rel="shortcut icon" type="image/x-icon" href="favicon.ico" />
+
+	<!-- bootstrap -->
+    <link href="css/bootstrap/bootstrap.css" rel="stylesheet" />
+    
+    <link rel="stylesheet" href="css/font-awesome-4.0.3/css/font-awesome.min.css">
+    <link rel="stylesheet" href="css/jquery-ui.css" />
+
+	<link href="css/style.css" rel="stylesheet" type="text/css" />
+
+	
+</head>
+<body>
+
+	<div id="loading">
+		<div>
+			<div></div>
+		    <div></div>
+		    <div></div>
+		</div>
+	</div>
+
+	<div id="wrapper">
+		<div id="top">
+			
+			<div class="main-logo">
+				<a href="index.html"><img src="images/logo.png"></a>
+			</div>
+			
+			<div class="m-nav"><i class="fa fa-bars"></i></div>
+
+			<div class="profile-nav">
+				<ul>
+					<li class="profile-user-info">
+						<a href="#" onclick="return false;">
+							<img src="images/user.jpg" class="user-img">
+							<b>Welcome, </b><span>John Doe</span> <i class="fa fa-user"></i> <i class="fa fa-caret-down"></i>
+						</a>
+					</li>
+					<li>
+						<a href="#" onclick="return false;">
+							<i class="fa fa-gear"></i> Settings
+						</a>
+					</li>
+					<li>
+						<a href="#" onclick="return false;" class="profile-badge-info">
+							<i class="fa fa-envelope"></i> Messages
+						</a>
+						<span class="badge profile-badge blue">16</span>
+					</li>
+					<li>
+						<a href="login.html">
+							<i class="fa fa-times-circle"></i> Logout
+						</a>
+					</li>
+				</ul>
+			</div>
+
+		</div> <!-- /top -->
+
+		<div id="sidebar">
+			<div class="search">
+				<input type="search" placeholder="Search here...">
+				<i class="fa fa-search"></i>
+			</div>
+			<ul class="main-nav">
+				<li>
+					<a href="index.html"><i class="fa fa-home"></i> Dashboard</a>
+				</li>
+				<li class="collapsible">
+					<a href="#" onclick="return false;"><i class="fa fa-list"></i> Form elements</a>
+					<ul class="sub-menu">
+						<li><a href="form-input.html"><i class="fa fa-pencil"></i>Inputs</a></li>
+						<li><a href="form-button.html"><i class="fa fa-tags"></i>Buttons</a></li>
+					</ul>
+				</li>
+				<li><a href="icons.html"><i class="fa fa-star"></i> Buttons &amp; icons</a></li>
+				<li><a href="ui.html"><i class="fa fa-arrows-h"></i> Slider elements</a></li>
+				<li class="active"><a href="#" onclick="return false;"><i class="fa fa-th"></i> Grid Layout</a></li>
+				<li class="collapsible">
+					<a href="#" onclick="return false;"><i class="fa fa-file"></i> Sample pages</i></a>
+					<ul class="sub-menu">
+						<li><a href="404.html"><i class="fa fa-bug"></i>404</a></li>
+						<li><a href="login.html"><i class="fa fa-key"></i>Login</a></li>
+					</ul>
+				</li>
+				<li><a href="charts.html"><i class="fa fa-bar-chart-o"></i> Charts &amp; graphs</a></li>
+			</ul>
+		</div> <!-- /sidebar -->
+
+		<div id="content" class="clearfix">
+
+			<div class="header">
+				
+				<h1 class="page-title">Grid System</h1>
+				<div class="stats">
+					<div class="stat" id="st-visits">
+						<div class="st-chart">
+							<span id="stats_visits" values="80,20"></span><br>
+							80%
+						</div>
+						<div class="st-detail">
+							28549<br><span>Visits</span>
+						</div>
+					</div> <!-- /stat -->
+					<div class="stat" id="st-users">
+						<div class="st-chart">
+							<span id="stats_users" values="50,50"></span><br>
+							50%
+						</div>
+						<div class="st-detail">
+							1278<br><span>Users</span>
+						</div>
+					</div> <!-- /stat -->
+					<div class="stat" id="st-orders">
+						<div class="st-chart">
+							<span id="stats_orders" values="65,35"></span><br>
+							65%
+						</div>
+						<div class="st-detail">
+							28549<br><span>Orders</span>
+						</div>
+					</div> <!-- /stat -->
+					<button class="btn btn-green"><i class="fa fa-refresh"></i> Update</button>
+					<button class="btn btn-blue"><i class="fa fa-chevron-circle-right"></i> Send</button>
+				</div> <!-- /stats -->
+
+			</div> <!-- /header -->
+
+			<div class="breadcrumbs">
+				<i class="fa fa-home"></i> Home <i class="fa fa-caret-right"></i> Grid System
+			</div>
+
+		<div class="wrp clearfix">
+
+				<!-- DropDown Responsive -->
+				<select id="qn">
+					<option>Add an Article</option>
+					<option>Save File</option>
+					<option>Add More</option>
+					<option>Messages</option>
+					<option selected>Check Statistics</option>
+				</select>
+				<!-- /DropDown Responsive -->
+				
+				<div class="quick-nav">
+					<ul>
+						<li class="qn-first"><a href="#" onclick="return false;"><i class="fa fa-edit"></i> Add an Article</a></li>
+						<li><a href="#" onclick="return false;"><i class="fa fa-save"></i> Save File</a></li>
+						<li><a href="#" onclick="return false;"><i class="fa fa-plus"></i> Add More</a></li>
+						<li>
+							<a href="#" onclick="return false;"><i class="fa fa-envelope"></i> Messages</a>
+							<span class="badge qnav-badge blue">16</span>
+						</li>
+						<li class="qn-last active"><a href="#" onclick="return false;"><i class="fa fa-bar-chart-o"></i> Check Statistics</a></li>
+						<li><a class="qn-arrow-left" href="#" onclick="return false;"><i class="fa fa-chevron-left"></i></a></li>
+						<li><a class="qn-arrow-right" href="#" onclick="return false;"><i class="fa fa-chevron-right"></i></a></li>
+					</ul>
+				</div>
+				
+				<div class="fluid">
+
+					<div class="widget grid12">
+						<div class="widget-header">
+							<div class="widget-title">
+								<i class="fa fa-th"></i> Grid 12
+							</div>
+							<div class="widget-controls">
+								<div class="widget-config"><a clsss="dropdown-toggle" data-toggle="dropdown" href="#" onclick="return false;"><i class="fa fa-gear"></i></a>
+								<ul class="dropdown-menu pull-right">
+								    <li><a href="#"><i class="fa fa-pencil"></i> Edit</a></li>
+	                                <li><a href="#"><i class="fa fa-trash-o"></i> Delete</a></li>
+	                                <li><a href="#"><i class="fa fa-ban"></i> Ban</a></li>
+								  </ul>
+								</div>
+							</div>
+						</div> <!-- /widget-header -->
+
+						<div class="widget-content">
+							<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsam, commodi quia nisi adipisci quam. Assumenda, voluptatibus, libero, temporibus, facere perspiciatis reiciendis inventore velit quia odit id sequi mollitia harum quisquam commodi dolore ipsa qui? Amet, vitae, a, nihil ipsum veritatis delectus distinctio itaque nobis alias consequatur ut perferendis. Quas, nostrum eaque iusto consequatur provident dolore nesciunt quo magnam possimus ipsam modi blanditiis atque similique vitae inventore natus laboriosam dolores doloremque et eius debitis harum cupiditate fuga dicta repellendus cum nulla doloribus molestiae sed repudiandae neque incidunt accusamus mollitia distinctio sequi odio perspiciatis. Aliquam, dolorem, ea facilis doloribus quia ut odio.</p>
+						</div>
+
+					</div> <!-- /widget -->
+
+				</div> <!-- /fluid -->
+
+				<div class="fluid">
+
+					<div class="widget grid6">
+						<div class="widget-header">
+							<div class="widget-title">
+								<i class="fa fa-th"></i> Grid 6
+							</div>
+							<div class="widget-controls">
+								<div class="widget-config"><a clsss="dropdown-toggle" data-toggle="dropdown" href="#" onclick="return false;"><i class="fa fa-gear"></i></a>
+								<ul class="dropdown-menu pull-right">
+								    <li><a href="#"><i class="fa fa-pencil"></i> Edit</a></li>
+	                                <li><a href="#"><i class="fa fa-trash-o"></i> Delete</a></li>
+	                                <li><a href="#"><i class="fa fa-ban"></i> Ban</a></li>
+								  </ul>
+								</div>
+							</div>
+						</div> <!-- /widget-header -->
+
+
+						<div class="widget-content">
+							<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Qui, optio, atque, magnam beatae modi officiis accusamus neque iste dignissimos velit hic doloremque necessitatibus consectetur! Optio, blanditiis, quo quos amet delectus saepe dicta eaque aliquid consequuntur itaque iure aperiam hic aliquam veniam incidunt iste rerum. Quasi, enim, fuga, dolor obcaecati quaerat inventore eligendi alias hic quos magni perspiciatis cumque sed impedit quia libero quas praesentium est necessitatibus harum et eius? Repudiandae.</p>
+						</div>
+
+					</div> <!-- /widget -->
+
+					<div class="widget grid6">
+						<div class="widget-header">
+							<div class="widget-title">
+								<i class="fa fa-th"></i> Grid 6
+							</div>
+							<div class="widget-controls">
+								<input type="checkbox" id="switch-form" />
+	  							<label class="switch" for="switch-form"><i></i></label>
+							</div>
+						</div> <!-- /widget-header -->
+						
+						<div class="widget-content">
+							<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quasi, culpa, rem delectus eum vitae esse corrupti eaque molestiae. Maxime iste ab est dolore esse a. Delectus, doloremque labore ad placeat sapiente officia commodi odit recusandae reiciendis a. Animi, totam, porro, explicabo consectetur iste eius dolorem dolores eaque quia aliquam minima error numquam et magnam exercitationem reiciendis velit laboriosam enim accusantium molestiae? Asperiores, perferendis illo eaque assumenda voluptatum ullam culpa? Unde.</p>
+						</div>
+
+					</div> <!-- /widget -->
+
+				</div> <!-- /fluid -->
+
+				
+				<div class="fluid">
+
+					<div class="widget grid4">
+						<div class="widget-header">
+							<div class="widget-title">
+								<i class="fa fa-th"></i> Grid 4
+							</div>
+							<div class="widget-controls">
+								<div class="widget-config"><a clsss="dropdown-toggle" data-toggle="dropdown" href="#" onclick="return false;"><i class="fa fa-gear"></i></a>
+								<ul class="dropdown-menu pull-right">
+								    <li><a href="#"><i class="fa fa-pencil"></i> Edit</a></li>
+	                                <li><a href="#"><i class="fa fa-trash-o"></i> Delete</a></li>
+	                                <li><a href="#"><i class="fa fa-ban"></i> Ban</a></li>
+								  </ul>
+								</div>
+							</div>
+						</div> <!-- /widget-header -->
+						<div class="widget-content">
+							<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cum, laborum, quo, iusto at ut voluptate odit soluta id accusantium repudiandae dolore similique qui earum nesciunt doloribus minima alias eveniet harum.</p>
+						</div>
+					</div> <!-- /widget -->
+
+					<div class="widget grid4">
+						<div class="widget-header">
+							<div class="widget-title">
+								<i class="fa fa-th"></i> Grid 4
+							</div>
+							<div class="widget-controls">
+								<div class="widget-config"><a clsss="dropdown-toggle" data-toggle="dropdown" href="#" onclick="return false;"><i class="fa fa-gear"></i></a>
+								<ul class="dropdown-menu pull-right">
+								    <li><a href="#"><i class="fa fa-pencil"></i> Edit</a></li>
+	                                <li><a href="#"><i class="fa fa-trash-o"></i> Delete</a></li>
+	                                <li><a href="#"><i class="fa fa-ban"></i> Ban</a></li>
+								  </ul>
+								</div>
+							</div>
+						</div> <!-- /widget-header -->
+						<div class="widget-content">
+							<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repudiandae impedit quibusdam quae maxime recusandae itaque totam iure. A, aut, veritatis sequi reiciendis nulla ipsum corporis alias architecto non nobis nemo.</p>
+						</div>
+					</div> <!-- /widget -->
+
+					<div class="widget grid4">
+						<div class="widget-header">
+							<div class="widget-title">
+								<i class="fa fa-th"></i> Grid 4
+							</div>
+							<div class="widget-controls">
+								<div class="widget-config"><a clsss="dropdown-toggle" data-toggle="dropdown" href="#" onclick="return false;"><i class="fa fa-gear"></i></a>
+								<ul class="dropdown-menu pull-right">
+								    <li><a href="#"><i class="fa fa-pencil"></i> Edit</a></li>
+	                                <li><a href="#"><i class="fa fa-trash-o"></i> Delete</a></li>
+	                                <li><a href="#"><i class="fa fa-ban"></i> Ban</a></li>
+								  </ul>
+								</div>
+							</div>
+						</div> <!-- /widget-header -->
+						<div class="widget-content">
+							<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facere, ut, repudiandae, eum quaerat necessitatibus sequi eos nulla soluta sed iusto quisquam est doloribus quod non reiciendis nesciunt sunt voluptatum possimus?</p>
+						</div>
+					</div> <!-- /widget -->
+
+				</div> <!-- /fluid -->
+
+	
+
+
+				<div class="fluid">
+
+					<div class="widget grid3">
+						<div class="widget-header">
+							<div class="widget-title">
+								<i class="fa fa-th"></i> Grid 3
+							</div>
+							<div class="widget-controls">
+								<div class="widget-config"><a clsss="dropdown-toggle" data-toggle="dropdown" href="#" onclick="return false;"><i class="fa fa-gear"></i></a>
+								<ul class="dropdown-menu pull-right">
+								    <li><a href="#"><i class="fa fa-pencil"></i> Edit</a></li>
+	                                <li><a href="#"><i class="fa fa-trash-o"></i> Delete</a></li>
+	                                <li><a href="#"><i class="fa fa-ban"></i> Ban</a></li>
+								  </ul>
+								</div>
+							</div>
+						</div> <!-- /widget-header -->
+						<div class="widget-content">
+							<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repellat, corporis!</p>
+						</div>
+					</div> <!-- /widget -->
+
+					<div class="widget grid3">
+						<div class="widget-header">
+							<div class="widget-title">
+								<i class="fa fa-th"></i> Grid 3
+							</div>
+							<div class="widget-controls">
+								<div class="widget-config"><a clsss="dropdown-toggle" data-toggle="dropdown" href="#" onclick="return false;"><i class="fa fa-gear"></i></a>
+								<ul class="dropdown-menu pull-right">
+								    <li><a href="#"><i class="fa fa-pencil"></i> Edit</a></li>
+	                                <li><a href="#"><i class="fa fa-trash-o"></i> Delete</a></li>
+	                                <li><a href="#"><i class="fa fa-ban"></i> Ban</a></li>
+								  </ul>
+								</div>
+							</div>
+						</div> <!-- /widget-header -->
+						<div class="widget-content">
+							<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repellat, corporis!</p>
+						</div>
+					</div> <!-- /widget -->
+
+					<div class="widget grid3">
+						<div class="widget-header">
+							<div class="widget-title">
+								<i class="fa fa-th"></i> Grid 3
+							</div>
+							<div class="widget-controls">
+								<div class="widget-config"><a clsss="dropdown-toggle" data-toggle="dropdown" href="#" onclick="return false;"><i class="fa fa-gear"></i></a>
+								<ul class="dropdown-menu pull-right">
+								    <li><a href="#"><i class="fa fa-pencil"></i> Edit</a></li>
+	                                <li><a href="#"><i class="fa fa-trash-o"></i> Delete</a></li>
+	                                <li><a href="#"><i class="fa fa-ban"></i> Ban</a></li>
+								  </ul>
+								</div>
+							</div>
+						</div> <!-- /widget-header -->
+						<div class="widget-content">
+							<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repellat, corporis!</p>
+						</div>
+					</div> <!-- /widget -->
+
+					<div class="widget grid3">
+						<div class="widget-header">
+							<div class="widget-title">
+								<i class="fa fa-th"></i> Grid 3
+							</div>
+							<div class="widget-controls">
+								<div class="widget-config"><a clsss="dropdown-toggle" data-toggle="dropdown" href="#" onclick="return false;"><i class="fa fa-gear"></i></a>
+								<ul class="dropdown-menu pull-right">
+								    <li><a href="#"><i class="fa fa-pencil"></i> Edit</a></li>
+	                                <li><a href="#"><i class="fa fa-trash-o"></i> Delete</a></li>
+	                                <li><a href="#"><i class="fa fa-ban"></i> Ban</a></li>
+								  </ul>
+								</div>
+							</div>
+						</div> <!-- /widget-header -->
+						<div class="widget-content">
+							<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repellat, corporis!</p>
+						</div>
+					</div> <!-- /widget -->
+
+
+				</div> <!-- /fluid -->
+
+
+				<div class="fluid">
+
+					<div class="widget grid4">
+						<div class="widget-header">
+							<div class="widget-title">
+								<i class="fa fa-th"></i> Grid 4
+							</div>
+							<div class="widget-controls">
+								<div class="widget-config"><a clsss="dropdown-toggle" data-toggle="dropdown" href="#" onclick="return false;"><i class="fa fa-gear"></i></a>
+								<ul class="dropdown-menu pull-right">
+								    <li><a href="#"><i class="fa fa-pencil"></i> Edit</a></li>
+	                                <li><a href="#"><i class="fa fa-trash-o"></i> Delete</a></li>
+	                                <li><a href="#"><i class="fa fa-ban"></i> Ban</a></li>
+								  </ul>
+								</div>
+							</div>
+						</div> <!-- /widget-header -->
+						<div class="widget-content">
+							<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequatur, totam, facilis dolorem iusto fugit ipsa obcaecati voluptates nesciunt animi eos?</p>
+						</div>
+					</div> <!-- /widget -->
+
+					<div class="widget grid8">
+						<div class="widget-header">
+							<div class="widget-title">
+								<i class="fa fa-th"></i> Grid 8
+							</div>
+							<div class="widget-controls">
+								<div class="widget-config"><a clsss="dropdown-toggle" data-toggle="dropdown" href="#" onclick="return false;"><i class="fa fa-gear"></i></a>
+								<ul class="dropdown-menu pull-right">
+								    <li><a href="#"><i class="fa fa-pencil"></i> Edit</a></li>
+	                                <li><a href="#"><i class="fa fa-trash-o"></i> Delete</a></li>
+	                                <li><a href="#"><i class="fa fa-ban"></i> Ban</a></li>
+								  </ul>
+								</div>
+							</div>
+						</div> <!-- /widget-header -->
+						<div class="widget-content">
+							<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eaque, debitis, dolorem quidem sed magni veritatis rem impedit beatae quos tenetur vel fuga ut quod. Nam, nobis repellendus blanditiis accusamus praesentium aspernatur. Consectetur, officiis, esse, quasi, sapiente sequi deleniti molestias quae nemo temporibus rerum impedit quis facere qui. Tempore, veniam, necessitatibus!</p>
+						</div>
+					</div> <!-- /widget -->
+
+
+				</div> <!-- /fluid -->
+
+
+				<div class="fluid">
+
+					<div class="widget grid9">
+						<div class="widget-header">
+							<div class="widget-title">
+								<i class="fa fa-th"></i> Grid 9
+							</div>
+							<div class="widget-controls">
+								<div class="widget-config"><a clsss="dropdown-toggle" data-toggle="dropdown" href="#" onclick="return false;"><i class="fa fa-gear"></i></a>
+								<ul class="dropdown-menu pull-right">
+								    <li><a href="#"><i class="fa fa-pencil"></i> Edit</a></li>
+	                                <li><a href="#"><i class="fa fa-trash-o"></i> Delete</a></li>
+	                                <li><a href="#"><i class="fa fa-ban"></i> Ban</a></li>
+								  </ul>
+								</div>
+							</div>
+						</div> <!-- /widget-header -->
+						<div class="widget-content">
+							<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Similique, temporibus, voluptatem, enim hic mollitia tempore error pariatur voluptas eius voluptate atque tempora necessitatibus dicta nihil consequatur voluptatum numquam odit magnam molestiae esse laudantium quo illo dolorum nisi magni at amet fuga voluptates adipisci libero modi sit doloribus deleniti iusto fugiat excepturi rerum ducimus aspernatur assumenda.</p>
+						</div>
+					</div> <!-- /widget -->
+
+					<div class="widget grid3">
+						<div class="widget-header">
+							<div class="widget-title">
+								<i class="fa fa-th"></i> Grid 3
+							</div>
+							<div class="widget-controls">
+								<div class="widget-config"><a clsss="dropdown-toggle" data-toggle="dropdown" href="#" onclick="return false;"><i class="fa fa-gear"></i></a>
+								<ul class="dropdown-menu pull-right">
+								    <li><a href="#"><i class="fa fa-pencil"></i> Edit</a></li>
+	                                <li><a href="#"><i class="fa fa-trash-o"></i> Delete</a></li>
+	                                <li><a href="#"><i class="fa fa-ban"></i> Ban</a></li>
+								  </ul>
+								</div>
+							</div>
+						</div> <!-- /widget-header -->
+						<div class="widget-content">
+							<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquid qui corporis culpa repellat eius sequi perferendis.</p>
+						</div>
+					</div> <!-- /widget -->
+
+
+				</div> <!-- /fluid -->
+
+
+			</div> <!-- /wrp -->
+
+		</div> <!-- /content -->
+		<footer class="footer">
+			2013 © Liberator Admin v1.0. Powered by <a href="http://www.pixeden.com/">pixeden</a>
+		</footer>
+
+	</div> <!-- /wrapper -->
+
+
+	<script type="text/javascript" src="js/prefixfree.min.js"></script>
+	<script type="text/javascript" src="js/jquery-1.10.2.min.js"></script>
+	<script type="text/javascript" src="js/jquery-ui.js"></script>
+	<script type="text/javascript" src="js/bootstrap.min.js"></script>
+	<script type="text/javascript" src="js/excanvas.min.js"></script>
+	
+	<script type="text/javascript" src="js/jquery.flot.js"></script>
+	<script type="text/javascript" src="js/jquery.flot.resize.js"></script>
+	<script type="text/javascript" src="js/jquery.flot.categories.js"></script>
+	<script type="text/javascript" src="js/jquery.flot.fillbetween.js"></script>
+	<script type="text/javascript" src="js/jquery.flot.stack.js"></script>
+	<script type="text/javascript" src="js/jquery.flot.crosshair.js"></script>
+
+	<script type="text/javascript" src="js/jquery.sparkline.min.js"></script>
+	<script type="text/javascript" src="js/jquery.hashchange.min.js"></script>
+	<script type="text/javascript" src="js/jquery.easytabs.min.js"></script>
+
+	<script type="text/javascript">
+
+		$(window).load(function(){
+			$('#loading').fadeOut(1000);
+
+		// $(document).ready(function(){
+
+			$('.collapsible > a').click(function(){
+				$(this).parent().toggleClass('open');
+				if( $(this).parent().siblings().hasClass('open') ){
+					$(this).parent().siblings().removeClass('open');
+				}
+			return false;
+			}) // Collapsible
+
+
+			// -------------------------- SPARKLINE miniCHARTS -----------------------------//
+
+			$("#stats_visits").sparkline('html',{
+		        type: 'pie',
+		        sliceColors: ['#499ac7','transparent'],
+		        offset:-90,
+		        tooltipClassname:'tooltip-sp',
+		        disableHighlight:true
+		    });
+		    $("#stats_users").sparkline('html',{
+		        type: 'pie',
+		        sliceColors: ['#37343b','transparent'],
+		        offset:-90,
+		        tooltipClassname:'tooltip-sp',
+		        disableHighlight:true 
+		    });
+		    $("#stats_orders").sparkline('html',{
+		        type: 'pie',
+		        sliceColors: ['#83a854','transparent'],
+		        offset:-90,
+		        tooltipClassname:'tooltip-sp',
+		        disableHighlight:true
+		    });
+
+
+
+			// eTabs
+			$('#eTabs').easytabs();
+
+			// Mobile Nav
+			$('.m-nav').click(function(){
+				$('.main-nav').toggleClass('open');
+			})
+
+			// Quick Nav clicks
+			$('.qn-arrow-left').click(function(){
+				var sel = $('.quick-nav ul').find('.active');
+				if( sel.hasClass('qn-first') ){
+					sel.removeClass('active');
+					sel.parent().find('.qn-last').addClass('active');
+				} else {
+					sel.removeClass('active').prev().addClass('active');
+				}
+			})
+			$('.qn-arrow-right').click(function(){
+				var sel = $('.quick-nav ul').find('.active');
+				if( sel.hasClass('qn-last') ){
+					sel.removeClass('active');
+					sel.parent().find('.qn-first').addClass('active');
+				} else {
+					sel.removeClass('active').next().addClass('active');
+				}
+			})
+
+			
+
+		}) // Ready.
+	</script>
+</body>
+</html>

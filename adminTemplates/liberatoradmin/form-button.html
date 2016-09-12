@@ -1,0 +1,610 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Liberator Admin Theme | Form Elements - buttons</title>
+
+	<link rel="apple-touch-icon" sizes="144x144" href="apple-touch-icon-ipad-retina.png" />
+	<link rel="apple-touch-icon" sizes="114x114" href="apple-touch-icon-iphone-retina.png" />
+	<link rel="apple-touch-icon" sizes="72x72" href="apple-touch-icon-ipad.png" />
+	<link rel="apple-touch-icon" sizes="57x57" href="apple-touch-icon-iphone.png" />
+	<link rel="shortcut icon" type="image/x-icon" href="favicon.ico" />
+	
+	<!-- bootstrap -->
+    <link href="css/bootstrap/bootstrap.css" rel="stylesheet" />
+    
+    <link rel="stylesheet" href="css/font-awesome-4.0.3/css/font-awesome.min.css">
+    <link rel="stylesheet" href="css/jquery-ui.css" />
+
+	<link href="css/style.css" rel="stylesheet" type="text/css" />
+
+	
+</head>
+<body>
+
+	<div id="loading">
+		<div>
+			<div></div>
+		    <div></div>
+		    <div></div>
+		</div>
+	</div>
+
+	<div id="wrapper">
+		<div id="top">
+			
+			<div class="main-logo">
+				<a href="index.html"><img src="images/logo.png"></a>
+			</div>
+			
+			<div class="m-nav"><i class="fa fa-bars"></i></div>
+
+			<div class="profile-nav">
+				<ul>
+					<li class="profile-user-info">
+						<a href="#" onclick="return false;">
+							<img src="images/user.jpg" class="user-img">
+							<b>Welcome, </b><span>John Doe</span> <i class="fa fa-user"></i> <i class="fa fa-caret-down"></i>
+						</a>
+					</li>
+					<li>
+						<a href="#" onclick="return false;">
+							<i class="fa fa-gear"></i> Settings
+						</a>
+					</li>
+					<li>
+						<a href="#" onclick="return false;" class="profile-badge-info">
+							<i class="fa fa-envelope"></i> Messages
+						</a>
+						<span class="badge profile-badge blue">16</span>
+					</li>
+					<li>
+						<a href="login.html" onclick="return false;">
+							<i class="fa fa-times-circle"></i> Logout
+						</a>
+					</li>
+				</ul>
+			</div>
+
+		</div> <!-- /top -->
+
+		<div id="sidebar">
+			<div class="search">
+				<input type="search" placeholder="Search here...">
+				<i class="fa fa-search"></i>
+			</div>
+			<ul class="main-nav">
+				<li>
+					<a href="index.html"><i class="fa fa-home"></i> Dashboard</a>
+				</li>
+				<li class="collapsible open">
+					<a href="#" onclick="return false;"><i class="fa fa-list"></i> Form elements</a>
+					<ul class="sub-menu">
+						<li><a href="form-input.html"><i class="fa fa-pencil"></i>Inputs</a></li>
+						<li class="active"><a href="#" onclick="return false;"><i class="fa fa-tags"></i>Buttons</a></li>
+					</ul>
+				</li>
+				<li><a href="icons.html"><i class="fa fa-star"></i> Buttons &amp; icons</a></li>
+				<li><a href="ui.html"><i class="fa fa-arrows-h"></i> Slider elements</a></li>
+				<li><a href="grid.html"><i class="fa fa-th"></i> Grid Layout</a></li>
+				<li class="collapsible">
+					<a href="#" onclick="return false;"><i class="fa fa-file"></i> Sample pages</i></a>
+					<ul class="sub-menu">
+						<li><a href="404.html"><i class="fa fa-bug"></i>404</a></li>
+						<li><a href="login.html"><i class="fa fa-key"></i>Login</a></li>
+					</ul>
+				</li>
+				<li><a href="charts.html"><i class="fa fa-bar-chart-o"></i> Charts &amp; graphs</a></li>
+			</ul>
+		</div> <!-- /sidebar -->
+
+		<div id="content" class="clearfix">
+
+			<div class="header">
+				
+				<h1 class="page-title">Buttons</h1>
+				<div class="stats">
+					<div class="stat" id="st-visits">
+						<div class="st-chart">
+							<span id="stats_visits" values="80,20"></span><br>
+							80%
+						</div>
+						<div class="st-detail">
+							28549<br><span>Visits</span>
+						</div>
+					</div> <!-- /stat -->
+					<div class="stat" id="st-users">
+						<div class="st-chart">
+							<span id="stats_users" values="50,50"></span><br>
+							50%
+						</div>
+						<div class="st-detail">
+							1278<br><span>Users</span>
+						</div>
+					</div> <!-- /stat -->
+					<div class="stat" id="st-orders">
+						<div class="st-chart">
+							<span id="stats_orders" values="65,35"></span><br>
+							65%
+						</div>
+						<div class="st-detail">
+							28549<br><span>Orders</span>
+						</div>
+					</div> <!-- /stat -->
+					<button class="btn btn-green"><i class="fa fa-refresh"></i> Update</button>
+					<button class="btn btn-blue"><i class="fa fa-chevron-circle-right"></i> Send</button>
+				</div> <!-- /stats -->
+
+			</div> <!-- /header -->
+
+			<div class="breadcrumbs">
+				<i class="fa fa-home"></i> Home <i class="fa fa-caret-right"></i> Form elements <i class="fa fa-caret-right"></i> Buttons
+			</div>
+
+		<div class="wrp clearfix">
+
+				<!-- DropDown Responsive -->
+				<select id="qn">
+					<option>Add an Article</option>
+					<option>Save File</option>
+					<option>Add More</option>
+					<option>Messages</option>
+					<option selected>Check Statistics</option>
+				</select>
+				<!-- /DropDown Responsive -->
+				
+				<div class="quick-nav">
+					<ul>
+						<li class="qn-first"><a href="#" onclick="return false;"><i class="fa fa-edit"></i> Add an Article</a></li>
+						<li><a href="#" onclick="return false;"><i class="fa fa-save"></i> Save File</a></li>
+						<li><a href="#" onclick="return false;"><i class="fa fa-plus"></i> Add More</a></li>
+						<li>
+							<a href="#" onclick="return false;"><i class="fa fa-envelope"></i> Messages</a>
+							<span class="badge qnav-badge blue">16</span>
+						</li>
+						<li class="qn-last active"><a href="#" onclick="return false;"><i class="fa fa-bar-chart-o"></i> Check Statistics</a></li>
+						<li><a class="qn-arrow-left" href="#" onclick="return false;"><i class="fa fa-chevron-left"></i></a></li>
+						<li><a class="qn-arrow-right" href="#" onclick="return false;"><i class="fa fa-chevron-right"></i></a></li>
+					</ul>
+				</div>
+				
+
+			<div class="fluid">
+
+				<div class="widget grid6">
+					<div class="widget-header">
+							<div class="widget-title">
+								<i class="fa fa-tag"></i> Simple Buttons
+							</div>
+							<div class="widget-controls">
+								<div class="widget-config"><a clsss="dropdown-toggle" data-toggle="dropdown" href="#" onclick="return false;"><i class="fa fa-gear"></i></a>
+								<ul class="dropdown-menu pull-right">
+								    <li><a href="#"><i class="fa fa-pencil"></i> Edit</a></li>
+	                                <li><a href="#"><i class="fa fa-trash-o"></i> Delete</a></li>
+	                                <li><a href="#"><i class="fa fa-ban"></i> Ban</a></li>
+								  </ul>
+								</div>
+							</div>
+						</div>
+					<div class="widget-content pad10">
+						
+					<div class="btns sd-btns">	
+						<button class="btn">Simple</button>
+						<button class="btn btn-green">Green</button>
+						<button class="btn btn-turquoise">Turquoise</button>
+						<button class="btn btn-aqua">Aqua</button>
+						<button class="btn btn-blue">Blue</button>
+						<button class="btn btn-lavender">Lavender</button>
+						<button class="btn btn-red">Red</button>
+						<button class="btn btn-orange">Orange</button>
+						<button class="btn btn-yellow">Yellow</button>
+						<button class="btn btn-grey">Grey</button>
+						<button class="btn btn-black">Black</button>
+						<button class="btn btn-dark-grey">Dark Grey</button>
+						<button class="btn btn-light-grey">Light Grey</button>
+						<button class="btn btn-white">White</button>
+					</div>
+						
+					</div> <!-- /widget-content -->
+					
+				</div>  <!-- /widget -->
+
+				<div class="widget grid6">
+						<div class="widget-header">
+							<div class="widget-title">
+								<i class="fa fa-tag"></i> Drop down/up buttons
+							</div>
+							<div class="widget-controls">
+								<div class="widget-config"><a clsss="dropdown-toggle" data-toggle="dropdown" href="#" onclick="return false;"><i class="fa fa-gear"></i></a>
+								<ul class="dropdown-menu pull-right">
+								    <li><a href="#"><i class="fa fa-pencil"></i> Edit</a></li>
+	                                <li><a href="#"><i class="fa fa-trash-o"></i> Delete</a></li>
+	                                <li><a href="#"><i class="fa fa-ban"></i> Ban</a></li>
+								  </ul>
+								</div>
+							</div>
+						</div>
+						<div class="widget-content pad10">
+							
+							<div class="btns dp-btns">
+
+								<div class="btn-group">
+								  <a class="btn btn dropdown-toggle" data-toggle="dropdown" href="#">
+								    Action
+								    <span class="caret"></span>
+								  </a>
+								  <ul class="dropdown-menu">
+								    <li><a href="#"><i class="fa fa-pencil"></i> Edit</a></li>
+	                                <li><a href="#"><i class="fa fa-trash-o"></i> Delete</a></li>
+	                                <li><a href="#"><i class="fa fa-ban"></i> Ban</a></li>
+								  </ul>
+								</div> <!-- /btn-group -->
+
+								<div class="btn-group">
+								  <a class="btn btn-green dropdown-toggle" data-toggle="dropdown" href="#">
+								    Action
+								    <span class="caret"></span>
+								  </a>
+								  <ul class="dropdown-menu pull-right">
+								    <li><a href="#"><i class="fa fa-pencil"></i> Edit</a></li>
+	                                <li><a href="#"><i class="fa fa-trash-o"></i> Delete</a></li>
+	                                <li><a href="#"><i class="fa fa-ban"></i> Ban</a></li>
+								  </ul>
+								</div> <!-- /btn-group -->
+
+								<div class="btn-group">
+								  <a class="btn btn-turquoise dropdown-toggle" data-toggle="dropdown" href="#">
+								    Action
+								    <span class="caret"></span>
+								  </a>
+								  <ul class="dropdown-menu">
+								    <li><a href="#"><i class="fa fa-pencil"></i> Edit</a></li>
+	                                <li><a href="#"><i class="fa fa-trash-o"></i> Delete</a></li>
+	                                <li><a href="#"><i class="fa fa-ban"></i> Ban</a></li>
+								  </ul>
+								</div> <!-- /btn-group -->
+
+								<div class="btn-group">
+								  <a class="btn btn-blue dropdown-toggle" data-toggle="dropdown" href="#">
+								    Action
+								    <span class="caret"></span>
+								  </a>
+								  <ul class="dropdown-menu pull-right">
+									<li><a href="#"><i class="fa fa-pencil"></i> Edit</a></li>
+	                                <li><a href="#"><i class="fa fa-trash-o"></i> Delete</a></li>
+	                                <li><a href="#"><i class="fa fa-ban"></i> Ban</a></li>
+								  </ul>
+								</div> <!-- /btn-group -->
+
+								<div class="btn-group">
+								  <a class="btn btn-lavender dropdown-toggle" data-toggle="dropdown" href="#">
+								    Action
+								    <span class="caret"></span>
+								  </a>
+								  <ul class="dropdown-menu">
+								    <li><a href="#"><i class="fa fa-pencil"></i> Edit</a></li>
+	                                <li><a href="#"><i class="fa fa-trash-o"></i> Delete</a></li>
+	                                <li><a href="#"><i class="fa fa-ban"></i> Ban</a></li>
+								  </ul>
+								</div> <!-- /btn-group -->
+
+								<div class="btn-group dropup">
+								  <a class="btn btn-red dropdown-toggle" data-toggle="dropdown" href="#">
+								    Action
+								    <span class="caret"></span>
+								  </a>
+								  <ul class="dropdown-menu pull-right">
+								    <li><a href="#"><i class="fa fa-pencil"></i> Edit</a></li>
+	                                <li><a href="#"><i class="fa fa-trash-o"></i> Delete</a></li>
+	                                <li><a href="#"><i class="fa fa-ban"></i> Ban</a></li>
+								  </ul>
+								</div> <!-- /btn-group -->
+
+								<div class="btn-group dropup">
+								  <a class="btn btn-grey dropdown-toggle" data-toggle="dropdown" href="#">
+								    Action
+								    <span class="caret"></span>
+								  </a>
+								  <ul class="dropdown-menu">
+								    <li><a href="#"><i class="fa fa-pencil"></i> Edit</a></li>
+	                                <li><a href="#"><i class="fa fa-trash-o"></i> Delete</a></li>
+	                                <li><a href="#"><i class="fa fa-ban"></i> Ban</a></li>
+								  </ul>
+								</div> <!-- /btn-group -->
+
+								<div class="btn-group dropup">
+								  <a class="btn btn-black dropdown-toggle" data-toggle="dropdown" href="#">
+								    Action
+								    <span class="caret"></span>
+								  </a>
+								  <ul class="dropdown-menu pull-right">
+								    <li><a href="#"><i class="fa fa-pencil"></i> Edit</a></li>
+	                                <li><a href="#"><i class="fa fa-trash-o"></i> Delete</a></li>
+	                                <li><a href="#"><i class="fa fa-ban"></i> Ban</a></li>
+								  </ul>
+								</div> <!-- /btn-group -->
+
+								<div class="btn-group dropup">
+								  <a class="btn btn-dark-grey dropdown-toggle" data-toggle="dropdown" href="#">
+								    Action
+								    <span class="caret"></span>
+								  </a>
+								  <ul class="dropdown-menu">
+								    <li><a href="#"><i class="fa fa-pencil"></i> Edit</a></li>
+	                                <li><a href="#"><i class="fa fa-trash-o"></i> Delete</a></li>
+	                                <li><a href="#"><i class="fa fa-ban"></i> Ban</a></li>
+								  </ul>
+								</div> <!-- /btn-group -->
+
+								<div class="btn-group dropup">
+								  <a class="btn btn-light-grey dropdown-toggle" data-toggle="dropdown" href="#">
+								    Action
+								    <span class="caret"></span>
+								  </a>
+								  <ul class="dropdown-menu pull-right">
+								    <li><a href="#"><i class="fa fa-pencil"></i> Edit</a></li>
+	                                <li><a href="#"><i class="fa fa-trash-o"></i> Delete</a></li>
+	                                <li><a href="#"><i class="fa fa-ban"></i> Ban</a></li>
+								  </ul>
+								</div> <!-- /btn-group -->
+
+								<div class="btn-group dropup">
+								  <a class="btn btn-white dropdown-toggle" data-toggle="dropdown" href="#">
+								    Action
+								    <span class="caret"></span>
+								  </a>
+								  <ul class="dropdown-menu">
+								    <li><a href="#"><i class="fa fa-pencil"></i> Edit</a></li>
+	                                <li><a href="#"><i class="fa fa-trash-o"></i> Delete</a></li>
+	                                <li><a href="#"><i class="fa fa-ban"></i> Ban</a></li>
+								  </ul>
+								</div> <!-- /btn-group -->
+
+							</div>
+
+						</div> <!-- /widget-content -->
+						
+					</div> <!-- /widget -->
+				</div>  <!-- /fluid -->
+
+				<div class="fluid">
+
+					<div class="widget grid6">
+						<div class="widget-header">
+							<div class="widget-title">
+								<i class="fa fa-arrow-circle-right"></i> Pagination
+							</div>
+							<div class="widget-controls">
+								<div class="widget-config"><a clsss="dropdown-toggle" data-toggle="dropdown" href="#" onclick="return false;"><i class="fa fa-gear"></i></a>
+								<ul class="dropdown-menu pull-right">
+								    <li><a href="#"><i class="fa fa-pencil"></i> Edit</a></li>
+	                                <li><a href="#"><i class="fa fa-trash-o"></i> Delete</a></li>
+	                                <li><a href="#"><i class="fa fa-ban"></i> Ban</a></li>
+								  </ul>
+								</div>
+							</div>
+							
+						</div>
+						<div class="widget-content pad10">
+
+							<div class="pag">
+	                          <ul class="pagination pagination-sm">
+	                            <li class="active"><a href="#" onclick="return false;">1</a></li>
+	                            <li><a href="#" onclick="return false;">2</a></li>
+	                            <li><a href="#" onclick="return false;">3</a></li>
+	                            <li><a href="#" onclick="return false;">4</a></li>
+	                            <li><a href="#" onclick="return false;">5</a></li>
+	                            <li><a href="#" onclick="return false;">6</a></li>
+	                            <li><a href="#" onclick="return false;">7</a></li>
+	                            <li class="disabled period"><a href="#" onclick="return false;">...</a></li>
+	                            <li><a href="#" onclick="return false;">15</a></li>
+	                            <li class="arrow"><a href="#" onclick="return false;"><i class="fa fa-angle-right"></i></a></li>
+	                          </ul>
+	                        </div> <!-- /pagination -->
+
+	                        <div class="pag">
+	                          <ul class="pagination pagination-sm">
+	                          	<li class="arrow"><a href="#" onclick="return false;"><i class="fa fa-angle-left"></i></a></li>
+	                            <li><a href="#" onclick="return false;">1</a></li>
+	                            <li class="active"><a href="#" onclick="return false;">2</a></li>
+	                            <li><a href="#" onclick="return false;">3</a></li>
+	                            <li><a href="#" onclick="return false;">4</a></li>
+	                            <li><a href="#" onclick="return false;">5</a></li>
+	                            <li><a href="#" onclick="return false;">6</a></li>
+	                            <li class="disabled period"><a href="#" onclick="return false;">...</a></li>
+	                            <li><a href="#" onclick="return false;">15</a></li>
+	                            <li class="arrow"><a href="#" onclick="return false;"><i class="fa fa-angle-right"></i></a></li>
+	                          </ul>
+	                        </div> <!-- /pagination -->
+
+	                        <div class="pag">
+	                        	<p>Disabled pages</p>
+	                          <ul class="pagination pagination-sm">
+	                          	<li class="arrow disabled"><a href="#" onclick="return false;"><i class="fa fa-angle-left"></i></a></li>
+	                            <li><a href="#" onclick="return false;">1</a></li>
+	                            <li><a href="#" onclick="return false;">2</a></li>
+	                            <li class="disabled"><a href="#" onclick="return false;">3</a></li>
+	                            <li class="disabled"><a href="#" onclick="return false;">4</a></li>
+	                            <li class="active"><a href="#" onclick="return false;">5</a></li>
+	                            <li><a href="#" onclick="return false;">6</a></li>
+	                            <li class="disabled period"><a href="#" onclick="return false;">...</a></li>
+	                            <li><a href="#" onclick="return false;">15</a></li>
+	                            <li class="arrow"><a href="#" onclick="return false;"><i class="fa fa-angle-right"></i></a></li>
+	                          </ul>
+	                        </div> <!-- /pagination -->
+
+	                        <div class="pag">
+	                        	<p>Active colors</p>
+	                          <ul class="pagination pagination-sm">
+	                          	<li class="arrow"><a href="#" onclick="return false;"><i class="fa fa-angle-left"></i></a></li>
+	                            <li><a href="#" onclick="return false;">1</a></li>
+	                            <li class="active"><a class="green" href="#" onclick="return false;">2</a></li>
+	                            <li class="active"><a href="#" onclick="return false;">3</a></li>
+	                            <li class="active"><a class="grey" href="#" onclick="return false;">4</a></li>
+	                            <li class="active"><a class="red" href="#" onclick="return false;">5</a></li>
+	                            <li class="active"><a class="orange" href="#" onclick="return false;">6</a></li>
+	                            <li class="disabled period"><a href="#" onclick="return false;">...</a></li>
+	                            <li><a href="#" onclick="return false;">15</a></li>
+	                            <li class="arrow"><a href="#" onclick="return false;"><i class="fa fa-angle-right"></i></a></li>
+	                          </ul>
+	                        </div> <!-- /pagination -->
+
+						</div>
+
+					</div> <!-- /widget -->
+
+					<div class="widget grid6">
+						<div class="widget-header">
+							<div class="widget-title">
+								<i class="fa fa-tags"></i> Button groups &amp; icons
+							</div>
+							<div class="widget-controls">
+								<div class="widget-config"><a clsss="dropdown-toggle" data-toggle="dropdown" href="#" onclick="return false;"><i class="fa fa-gear"></i></a>
+								<ul class="dropdown-menu pull-right">
+								    <li><a href="#"><i class="fa fa-pencil"></i> Edit</a></li>
+	                                <li><a href="#"><i class="fa fa-trash-o"></i> Delete</a></li>
+	                                <li><a href="#"><i class="fa fa-ban"></i> Ban</a></li>
+								  </ul>
+								</div>
+							</div>
+							
+						</div>
+						<div class="widget-content pad10">
+							<div class="btns">
+								<button class="btn btn-red"><i class="fa fa-youtube-play"></i> Play video</button>
+								<button class="btn btn-orange"><i class="fa fa-html5"></i> New features</button>
+								<button class="btn btn-black"><i class="fa fa-github"></i> Fork me!</button>
+
+								<button class="btn btn-blue"><i class="fa fa-twitter"></i> Follow us!</button>
+								<button class="btn btn-pink"><i class="fa fa-pinterest"></i> Pin it!</button>
+								<button class="btn btn-white"><i class="fa fa-apple"></i> Apple Store</button>
+							</div>
+							<hr>
+
+							<p>Button groups</p>
+							<div class="btn-group">
+								<button class="btn btn-pink"><i class="fa fa-times"></i> Cancel</button>
+								<button class="btn btn-green"><i class="fa fa-check"></i> Proceed</button>
+							</div>
+							<hr>
+							<div class="btn-group">
+								
+								<button class="btn btn-grey"><i class="fa fa-fast-backward"></i></button>
+								<button class="btn btn-black"><i class="fa fa-stop"></i></button>
+								<button class="btn btn-grey"><i class="fa fa-pause"></i></button>
+								<button class="btn btn-blue"><i class="fa fa-play"></i></button>
+								<button class="btn btn-grey"><i class="fa fa-fast-forward"></i></button>
+								
+							</div>
+
+						</div>
+					</div>
+
+				</div> <!-- /fluid -->
+
+
+			</div> <!-- /wrp -->
+
+		</div> <!-- /content -->
+		<footer class="footer">
+			2013 © Liberator Admin v1.0. Powered by <a href="http://www.pixeden.com/">pixeden</a>
+		</footer>
+
+	</div> <!-- /wrapper -->
+
+
+	<script type="text/javascript" src="js/prefixfree.min.js"></script>
+	<script type="text/javascript" src="js/jquery-1.10.2.min.js"></script>
+	<script type="text/javascript" src="js/jquery-ui.js"></script>
+	<script type="text/javascript" src="js/bootstrap.min.js"></script>
+	<script type="text/javascript" src="js/excanvas.min.js"></script>
+	
+	<script type="text/javascript" src="js/jquery.flot.js"></script>
+	<script type="text/javascript" src="js/jquery.flot.resize.js"></script>
+	<script type="text/javascript" src="js/jquery.flot.categories.js"></script>
+	<script type="text/javascript" src="js/jquery.flot.fillbetween.js"></script>
+	<script type="text/javascript" src="js/jquery.flot.stack.js"></script>
+	<script type="text/javascript" src="js/jquery.flot.crosshair.js"></script>
+
+	<script type="text/javascript" src="js/jquery.sparkline.min.js"></script>
+	<script type="text/javascript" src="js/jquery.hashchange.min.js"></script>
+	<script type="text/javascript" src="js/jquery.easytabs.min.js"></script>
+
+	<script type="text/javascript">
+
+		$(window).load(function(){
+			$('#loading').fadeOut(1000);
+
+		// $(document).ready(function(){
+
+			$('.collapsible > a').click(function(){
+				$(this).parent().toggleClass('open');
+				if( $(this).parent().siblings().hasClass('open') ){
+					$(this).parent().siblings().removeClass('open');
+				}
+			return false;
+			}) // Collapsible
+
+
+			// -------------------------- SPARKLINE miniCHARTS -----------------------------//
+
+			$("#stats_visits").sparkline('html',{
+		        type: 'pie',
+		        sliceColors: ['#499ac7','transparent'],
+		        offset:-90,
+		        tooltipClassname:'tooltip-sp',
+		        disableHighlight:true
+		    });
+		    $("#stats_users").sparkline('html',{
+		        type: 'pie',
+		        sliceColors: ['#37343b','transparent'],
+		        offset:-90,
+		        tooltipClassname:'tooltip-sp',
+		        disableHighlight:true 
+		    });
+		    $("#stats_orders").sparkline('html',{
+		        type: 'pie',
+		        sliceColors: ['#83a854','transparent'],
+		        offset:-90,
+		        tooltipClassname:'tooltip-sp',
+		        disableHighlight:true
+		    });
+
+
+		 
+
+			// eTabs
+			$('#eTabs').easytabs();
+
+			// Mobile Nav
+			$('.m-nav').click(function(){
+				$('.main-nav').toggleClass('open');
+			})
+
+			// Quick Nav clicks
+			$('.qn-arrow-left').click(function(){
+				var sel = $('.quick-nav ul').find('.active');
+				if( sel.hasClass('qn-first') ){
+					sel.removeClass('active');
+					sel.parent().find('.qn-last').addClass('active');
+				} else {
+					sel.removeClass('active').prev().addClass('active');
+				}
+			})
+			$('.qn-arrow-right').click(function(){
+				var sel = $('.quick-nav ul').find('.active');
+				if( sel.hasClass('qn-last') ){
+					sel.removeClass('active');
+					sel.parent().find('.qn-first').addClass('active');
+				} else {
+					sel.removeClass('active').next().addClass('active');
+				}
+			})
+
+			
+
+		}) // Ready.
+	</script>
+</body>
+</html>
