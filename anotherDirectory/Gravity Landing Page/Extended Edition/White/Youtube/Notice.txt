@@ -1,0 +1,1 @@
+Please note, jquery.mb.YTPlayer(BACKGROUND YOUTUBE VIDEO) must be deployed on a web server to function. The YouTube player will not work when loaded into your browser from your machine.
